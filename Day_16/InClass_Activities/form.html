@@ -20,15 +20,18 @@
                 <textarea class="form-control" id="profile" rows="3"></textarea>
             </div>
 
-            <button onClick="submitForm(event)" class="btn btn-primary">Primary</button>
+            <!-- Adding 'event' to function call within onClick to allow modification. -->
+            <button  id="submitBtn" class="btn btn-primary">Primary</button>
         </form>
     </div>
     <script>
-        // Note: passing 'event' parameter to function so we can modify the behaviour, this stops the clicking event to refresh the page.
-        function submitForm(event) {
+        function submitForm() {
+            // Note: passing 'event' parameter to function so we can modify the behaviour, this stops the clicking event to refresh the page.
             event.preventDefault();
             console.log(`[submitForm] submitting form!`);
         }
+        // Another way to add click event, notice that we do not have to pass in 'event' parameter.
+        document.getElementById("submitBtn").addEventListener("click", submitForm);
     </script>
 </body>
 </html>
