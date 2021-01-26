@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+​
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Data Types, User Input, Conditional Logic
+  </title>
+</head>
+​
+<body>
+    <script>
+        function welcome(){
+            console.log( "[welcome] running welcome function" )
+            // alert( 'Welcome to my page' )
+            document.querySelector('#myName').innerHTML = "Fil was here"
+        }
+        function mouseOnButton(){
+            document.body.style.background = "red"
+        }
+        function mouseOffButton(){
+            document.body.style.background = "white"
+        }        
+    </script>
+    <h1 id="myName">...</h1>
+    <button onClick="welcome()" 
+        onMouseOver="mouseOnButton()"
+        onMouseOut="mouseOffButton()">Click me!</button>
+</body>
+​
+</html>
