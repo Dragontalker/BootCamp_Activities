@@ -13,13 +13,28 @@ $(document).ready(() => {
         $cartMenu.show();
     })
 
+    // Add mouseleave event handler '#cart'
+    $cart.on('mouseleave', () => {
+        $cartMenu.hide();
+    })
+
     // Add click event handlers to '#account'
     $account.on('click', () => {
         $accountMenu.show();
     })
 
+    // Add mouseleave event handler 'account'
+    $account.on('mouseleave', () => {
+        $accountMenu.hide();
+    })
+
     // Add click event handlers to '#help'
     $help.on('click', () => {
         $helpMenu.show();
+    })
+
+    // Add mouseleave event handler 'help'
+    $help.on('mouseleave', () => {
+        $helpMenu.hide();
     })
 })
