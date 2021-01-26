@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Row Grid Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        .outline {
+            border: 2px solid grey;
+            padding: 5px;
+            margin: 5px;
+        }
+        .height200 {
+            height: 200px;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col outline">
+                Grid 1!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col outline">
+                Grid 2!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col outline height200">Col</div>
+                    <div class="col outline height200">Col</div>
+                    <div class="col outline height200">Col</div>
+                    <div class="col outline height200">Col</div>
+                </div>
+                <div class="row">
+                    <div class="col outline">Col</div>
+                    <div class="col outline">Col</div>
+                </div>
+                <div class="row">
+                    <div class="col outline">1/2 Grid!</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col outline height200">Col</div>
+                    <div class="col outline height200">Col</div>
+                    <div class="col outline height200">Col</div>
+                    <div class="col outline height200">Col</div>
+                </div>
+                <div class="row">
+                    <div class="col outline">Col</div>
+                    <div class="col outline">Col</div>
+                </div>
+                <div class="row">
+                    <div class="col outline">1/2 Grid!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
