@@ -20,8 +20,15 @@
                 <textarea class="form-control" id="profile" rows="3"></textarea>
             </div>
 
-            <button class="btn btn-primary">Primary</button>
+            <button onClick="submitForm(event)" class="btn btn-primary">Primary</button>
         </form>
     </div>
+    <script>
+        // Note: passing 'event' parameter to function so we can modify the behaviour, this stops the clicking event to refresh the page.
+        function submitForm(event) {
+            event.preventDefault();
+            console.log(`[submitForm] submitting form!`);
+        }
+    </script>
 </body>
 </html>
