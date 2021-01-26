@@ -4,18 +4,22 @@ $(document).ready(() => {
     const $account = $('#account');
     const $help = $('#help');
 
+    const $cartMenu = $('#cartMenu');
+    const $accountMenu = $('#accountMenu');
+    const $helpMenu = $('#helpMenu');
+
     // Add click event handlers to '#cart'
     $cart.on('click', () => {
-
+        $cartMenu.show();
     })
 
     // Add click event handlers to '#account'
     $account.on('click', () => {
-
+        $accountMenu.show();
     })
 
     // Add click event handlers to '#help'
     $help.on('click', () => {
-        
+        $helpMenu.show();
     })
 })
