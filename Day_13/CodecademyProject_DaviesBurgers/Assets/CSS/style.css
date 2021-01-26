@@ -1,0 +1,139 @@
+/* Universal Styles */
+
+body {
+    background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_foodlogo.png");
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+  /* Navigation */
+  
+nav {
+    text-align: center;
+}
+
+nav img {
+    display: block;
+    /* Task 1: Set the width of the img to 180 pixels, center the image horizontally using the margin property. */
+    width: 180 px;
+    margin: 10px auto;
+}
+  
+nav span {
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    /* Task 2: Set the margin of span elements inside the nav to 10 pixels on the top and bottom, and 0 pixels on the left and right. */
+    margin: 10px 0px;
+}
+  
+nav a {
+    color: #666666;
+}
+  
+/* Content Container */
+  
+.content {
+    width: 100%;
+    /* Task 3.a: Set the height of content to 500 pixels, create a 10-pixel margin and automatic horizontal margins. */
+    height: 500px;
+    margin: 10px auto;
+    /* Task 4: Make .content scrollable with the overflow property. */
+    overflow: scroll;
+}
+  
+/* Content Header */
+  
+.header {
+    background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
+    background-position: center;
+    background-size: cover;
+    /* Task 5.a: Set the .height class to 320 pixels. */
+    height: 320px;
+}
+  
+.header h1 {
+    background-color: #05A8AA;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+    width: 68%;
+    /* Task 5.b: Create a 20-pixel padding, set vertical margins to 0 pixels and the horizontal margins to be determined automatically. */
+    padding: 20px;
+    margin: 0px auto;
+}
+  
+/* Content Body */
+  
+.content .body {
+    width: 90%;
+    /* Task 3.b: Set .body elemtns inside .content to have no vertical margin and automatic horizontal margins so that it is centered. */
+    margin: 0px auto;
+}
+  
+.body p {
+    color: #333333;
+    font-weight: 100;
+    line-height: 34px;
+    width: 90%;
+    margin-top: 18px;
+  }
+  
+/* Content Button */
+  
+.button {
+    border-radius: 4px;
+    color: #05A8AA;
+    display: block;
+    font-weight: 700;
+    /* Task 6: Set the width to 200 pixels, padding to 20 pixels, verical magins to 40 pixels and horizontal margins to automatic, give the button a 1-pixel, solid, blue border. */
+    width: 200px;
+    padding: 20px;
+    margin: 40px auto;
+    border: 1px solid blue;
+}
+  
+  .button:hover {
+    background-color: #05A8AA;
+    border: 1px solid #05A8AA;
+    color: #FFF;
+  }
+  
+/* Content Nutrition */
+  
+ul.nutrition {
+    /* Task 7.a: Set the padding to 20 pixels. */
+    padding: 20px;
+}
+  
+ul.nutrition li {
+    display: inline-block;
+    background-color: #05A8AA;
+    list-style: none;
+    /* Task 7.b: set the width to 200 pixels, set a 10-pixel vertical padding and 20-pixel horizontal padding to the same elements, add a 3-pixel bottom margin to the same elements. */
+    width: 200px;
+    padding: 10px 20px;
+    margin: 3px;
+}
+  
+.nutrition .category {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
+}
+  
+.nutrition .value {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
