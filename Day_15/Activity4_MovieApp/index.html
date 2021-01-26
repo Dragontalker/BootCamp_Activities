@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Movie Search</h1>
+
+    <div class="row">
+      <div id="buttons-view" class="col-10 col-md-11 alert alert-secondary">
+        <!-- SAVED movies get added here.-->
+        
+      </div>
+      <div class="col-2 col-md-1">
+        <button onClick="clearFavouriteButtons()" class="btn btn-secondary-outline">Clear</button>
+      </div>
+    </div>      
+
+    <div class="card">
+      <form id="movie-form" class="card-body">
+        <label for="movie-input">Add a Movie Search Button</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fas fa-ticket-alt"></i>
+          </span>
+          <!-- INPUT form -->
+          <input id="movie-input" type="text" class="form-control" placeholder="Movie Title" />
+        </div>
+
+        <button onClick="addMovie(event)" id="add-movie" class="btn btn-primary">Add Movie Search</button>
+      </form>
+    </div>
+    
+    <div id="movie-view" class="row">
+      <!-- add cards of movies in here -->
+      <!-- Add an example card -->
+      <div class="card col-2">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  
+<script src="AssetsJavaScripts/script.js" type="text/javascript">
+  /* Wire up the UI
+  #buttons-view  -- put the clickable favourite movie buttons in here
+  clearFavouriteButtons() -- make this function to clear the favourite button list
+
+  #movie-input -- INPUT with the movie name
+  addMovie(event) -- the button clicked to display the inputted movie
+
+  #movie-view -- where the movie list is displayed:
+      Show movies as:
+      [Title]
+      [Release Year]
+      [Poster Image]
+      ---------------
+  */
+</script>
+
+</body>
+
+</html>
+

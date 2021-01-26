@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event Bubbling</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div>
+      <h2>Event Bubbling</h2>
+      <!-- checkbox [inner]-->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="stopPropInner">
+        <label class="form-check-label" for="stopPropInner">
+          InnerDiv: stopPropagation()
+        </label>
+      </div>      
+      <!-- checkbox [button]-->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="stopPropBtn">
+        <label class="form-check-label" for="stopPropBtn">
+          Button: stopPropagation()
+        </label>
+      </div>
+    
+      <div class="outer-div outline"><p>Click Me - Purple</p>
+          <div class="inner-div outline"><p>Click Me - Green</p>
+              <div>
+                  <button class="button outline"><p>Click Me - Red</p></button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+<script>
+var outer = document.querySelector(".outer-div");
+var inner = document.querySelector(".inner-div");
+var button = document.querySelector(".button");
+
+outer.addEventListener("click", triggerOutter);
+inner.addEventListener("click", triggerInner);
+button.addEventListener("click", triggerButton);
+
+function triggerOutter(event) {
+  var origColour = outer.style.backgroundColor
+  outer.style.backgroundColor="blue"
+  // change back after 15 seconds
+  setTimeout( function(){ outer.style.backgroundColor=origColour }, 5000 )
+}
+
+function triggerInner(event) {
+  var isChecked = document.querySelector('#stopPropInner').checked
+  if( isChecked) event.stopPropagation()
+
+  // event.stopPropagation();
+  var origColour = inner.style.backgroundColor
+  inner.style.backgroundColor="lightgreen"
+  // change back after 15 seconds
+  setTimeout( function(){ inner.style.backgroundColor=origColour }, 5000 )
+}
+
+function triggerButton(event) {
+  var isChecked = document.querySelector('#stopPropBtn').checked
+  if( isChecked) event.stopPropagation()
+
+  var origColour = button.style.backgroundColor
+  button.style.backgroundColor="red"
+  // change back after 15 seconds
+  setTimeout( function(){ button.style.backgroundColor=origColour }, 5000 )
+}
+</script>
+</body>
+</html>
