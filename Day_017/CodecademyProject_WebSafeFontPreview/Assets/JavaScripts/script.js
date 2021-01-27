@@ -23,7 +23,12 @@ $(document).ready(() => {
     // Task 7: use a keyup event handler to change the font-size
     $('#size').on('keyup', event => {
         // Task 8: create a variable called fontSize
-        let fonSize = $(event.currentTarget).val() + 'px';
+        let fontSize = $(event.currentTarget).val() + 'px';
+
+        // Task 9: change the font-size property of the preview text to the value stored in fontSize
+        $('.preview').css({
+            fontSize: fontSize
+        })
 
     })
 })
