@@ -26,6 +26,7 @@ $(document).ready(() => {
 
     // Task 6: create an event handler for correct answer
     $('.correct-answer').on('click', () => {
-        
+        // Task 7: make the frowny face to disappear
+        $('.frown').hide();
     })
 })
