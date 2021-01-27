@@ -1,6 +1,11 @@
 // Select elements in the document programmatically
 
 // Starting from the `<div id="top">` element, place a blue border around the title of the website, Develop Community Center
+// Try each step in console to see the effect of jQuery
+$('#top');
+$('#top').siblings();
+$('#top').siblings().first();
+$('#top').siblings().first().addClass('p-5');
 $('#top').siblings().first().addClass('p-5').css('border', '#1bbc9b solid 2px');
 
 // Starting from the `<div id="bottom">` element, get a list of its sibling elements and target the fifth one (the `<ul>` element), then change the text on the last item on the list to say "Meetups", not "GitHub"
