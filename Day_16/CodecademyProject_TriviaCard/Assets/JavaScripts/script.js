@@ -28,5 +28,7 @@ $(document).ready(() => {
     $('.correct-answer').on('click', () => {
         // Task 7: make the frowny face to disappear
         $('.frown').hide();
+        // Task 8: make the smiley face appear
+        $('.smiley').show();
     })
 })
