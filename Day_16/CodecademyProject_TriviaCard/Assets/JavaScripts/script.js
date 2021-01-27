@@ -9,14 +9,14 @@ $(document).ready(() => {
 
     // Task 3: animating the wrong answers, when clicked, fade out
     $('.wrong-answer-one').on('click', () => {
-
+        $('.wrong-text-one').fadeOut('slow');
     });
 
     $('.wrong-answer-two').on('click', () => {
-
+        $('.wrong-text-two').fadeOut('slow');
     });
 
     $('.wrong-answer-three').on('click', () => {
-
+        $('.wrong-text-three').fadeOut('slow');
     });
 })
