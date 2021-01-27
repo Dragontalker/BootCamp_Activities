@@ -22,9 +22,14 @@
 
         // setTimeout( function(){ console.log( `timeout expired! 5000ms` ) }, 5000 )
         // console.log( `. finished running set-timeout` )        
-        var fetchUrl = "https://www.omdbapi.com/?apikey=trilogy&t=mad%20max"
+        var fetchUrl = "https://www.omdbapi.com/?apikey=trilogy&t=mad%20max";
+        console.log(`...fetching from ${fetchUrl}`);
         var movieData = fetch( fetchUrl ).then( r=>r.json() )
         console.log( `. fetched movie data: `, movieData )
+
+        // You can see that if you use this
+        movieData // returns a promise
+        await movieData // returns a object, suggest promise only works with await since it takes longer than 1ms.
 
         console.log( `.. finished our script!` )
         // asyncronous tools
