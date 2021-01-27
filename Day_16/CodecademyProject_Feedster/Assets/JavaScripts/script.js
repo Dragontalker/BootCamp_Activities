@@ -17,4 +17,9 @@ $(document).ready(() => {
         // Task 4: Chain a mouse leave event handler
         $(event.currentTarget).removeClass('btn-hover');
     })
+
+    // Task 6: use the .on() method to add a keyup event listener to the '.postText' element.
+    $('.postText').on('keyup', () => {
+
+    })
 }); 
