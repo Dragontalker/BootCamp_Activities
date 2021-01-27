@@ -9,7 +9,7 @@
         
     </body>
     <script>
-        // Demonstration of sync process.
+        // Demonstration of defualt JavaScript async process.
         // Start from here,
         var x = 5;
         console.log(`.var x = ${x}`);
@@ -20,7 +20,7 @@
         var z = 9;
         console.log(`.var z = ${z}`);
 
-        // Alert is a popup, which creates a block in the process.
+        // Alert is a popup, which creates a block in the process, disrupt the async behavior
         alert(`Variable ${x}, ${y}, ${z}`)
         console.log(`.. finished alert` );
         // Ends here.
