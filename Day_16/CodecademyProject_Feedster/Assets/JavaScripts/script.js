@@ -32,6 +32,9 @@ $(document).ready(() => {
         // Task 11: make the '.wordcount' message turn red if the user runs out of characters.
         if (remaining <= 0) {
             $('.wordcount').addClass('red');
+        } else {
+            // Task 12: remove the 'red' class from '.wordcount'.
+            $('.wordcount').removeClass('red');
         }
     })
 }); 
