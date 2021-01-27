@@ -10,13 +10,17 @@ $(document).ready(() => {
     // Task 3: animating the wrong answers, when clicked, fade out
     $('.wrong-answer-one').on('click', () => {
         $('.wrong-text-one').fadeOut('slow');
+        // Task 5: target the image with clas frown and it make it show itself
+        $('.frown').show();
     });
 
     $('.wrong-answer-two').on('click', () => {
         $('.wrong-text-two').fadeOut('slow');
+        $('.frown').show();
     });
 
     $('.wrong-answer-three').on('click', () => {
         $('.wrong-text-three').fadeOut('slow');
+        $('.frown').show();
     });
 })
