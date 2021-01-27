@@ -7,33 +7,40 @@
 </head>
 <body>
     <script>
-        var x = 5
-        console.log( `. var x=${x}` )
-        
-        var y = 7
-        console.log( `. var y=${y}` )
+        async function main() {
+            var x = 5
+            console.log( `. var x=${x}` )
+            
+            var y = 7
+            console.log( `. var y=${y}` )
 
-        var z = 9
-        console.log( `. var z=${9}` )
+            var z = 9
+            console.log( `. var z=${9}` )
 
-        // this is SYNCRONOUS function
-        // alert( `variables ${x}, ${y}, ${z}` )
-        // console.log( `.. finished alert` )
+            // this is SYNCRONOUS function
+            // alert( `variables ${x}, ${y}, ${z}` )
+            // console.log( `.. finished alert` )
 
-        // setTimeout( function(){ console.log( `timeout expired! 5000ms` ) }, 5000 )
-        // console.log( `. finished running set-timeout` )        
-        var fetchUrl = "https://www.omdbapi.com/?apikey=trilogy&t=mad%20max";
-        console.log(`...fetching from ${fetchUrl}`);
-        var movieData = fetch( fetchUrl ).then( r=>r.json() )
-        console.log( `. fetched movie data: `, movieData )
+            // setTimeout( function(){ console.log( `timeout expired! 5000ms` ) }, 5000 )
+            // console.log( `. finished running set-timeout` )        
+            var fetchUrl = "https://www.omdbapi.com/?apikey=trilogy&t=mad%20max";
+            console.log(`...fetching from ${fetchUrl}`);
+            var movieData = await fetch( fetchUrl ).then( r=>r.json() )
+            console.log( `. fetched movie data: `, movieData )
 
-        // You can see that if you use this
-        movieData // returns a promise
-        await movieData // returns a object, suggest promise only works with await since it takes longer than 1ms.
+            // You can see that if you use this
+            // movieData // returns a promise
+            // await movieData // returns a object, suggest promise only works with await since it takes longer than 1ms.
 
-        console.log( `.. finished our script!` )
-        // asyncronous tools
-        // somepoint later outputs setTimeout result...
+            // However, await only works in async function
+            
+
+            console.log( `.. finished our script!` )
+            // asyncronous tools
+            // somepoint later outputs setTimeout result...
+        };
+
+        main();
     </script>
 </body>
 </html>
