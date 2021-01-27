@@ -8,4 +8,9 @@ $(document).ready(() => {
     $('.nav-menu').on('mouseleave', () => {
         $('.nav-menu').hide();
     });
+
+    // Task 3: Add an event handler that adds the .btn-hover class to .btn elements when a user mouses over a .btn element.
+    $('.btn').on('mouseenter', () => {
+        $('.btn').addClass('btn-hover');
+    })
 }); 
