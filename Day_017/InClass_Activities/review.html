@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Review of API and ASYNC</title>
-    </head>
-    <body>
-        
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
     <script>
-        // Demonstration of defualt JavaScript async process.
-        // Start from here,
-        var x = 5;
-        console.log(`.var x = ${x}`);
+        var x = 5
+        console.log( `. var x=${x}` )
+        
+        var y = 7
+        console.log( `. var y=${y}` )
 
-        var y = 7;
-        console.log(`.var y = ${y}`);
+        var z = 9
+        console.log( `. var z=${9}` )
 
-        var z = 9;
-        console.log(`.var z = ${z}`);
+        // this is SYNCRONOUS function
+        // alert( `variables ${x}, ${y}, ${z}` )
+        // console.log( `.. finished alert` )
 
-        // Alert is a popup, which creates a block in the process, disrupt the async behavior
-        alert(`Variable ${x}, ${y}, ${z}`)
-        console.log(`.. finished alert` );
-        // Ends here.
+        // setTimeout( function(){ console.log( `timeout expired! 5000ms` ) }, 5000 )
+        // console.log( `. finished running set-timeout` )        
+        var fetchUrl = "https://www.omdbapi.com/?apikey=trilogy&t=mad%20max"
+        var movieData = fetch( fetchUrl ).then( r=>r.json() )
+        console.log( `. fetched movie data: `, movieData )
 
-
+        console.log( `.. finished our script!` )
+        // asyncronous tools
+        // somepoint later outputs setTimeout result...
     </script>
+</body>
 </html>
