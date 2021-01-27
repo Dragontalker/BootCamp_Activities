@@ -3,44 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Giffy Loader</title>
 </head>
 <body>
-    <script>
-        async function main() {
-            var x = 5
-            console.log( `. var x=${x}` )
-            
-            var y = 7
-            console.log( `. var y=${y}` )
+<h1>Giffy Pictures</h1>
+<h3>Snow Giffy's</h3>
+<div id="giffyList">
+    <!-- cards in here -->
+</div>
+<script>
+    var pictureData
 
-            var z = 9
-            console.log( `. var z=${9}` )
+    async function giffySearch( question ){
+        // get the pictures from giffy
+        var fetchUrl = "https://api.giphy.com/v1/stickers/search?api_key=hbv83wVH2MkLnOzTEWDbEVXDjyAMnsZ8&q="+question
+        console.log( `.. fetching from ${fetchUrl}` )
+        pictureData = await fetch( fetchUrl ).then( r=>r.json() )
+        console.log( `. fetched picture data: `, pictureData )
 
-            // this is SYNCRONOUS function
-            // alert( `variables ${x}, ${y}, ${z}` )
-            // console.log( `.. finished alert` )
+        console.log( `.. showing picture data!` )
+        //
+        var imageCount = pictureData.data.length
+        for( var i=0; i<imageCount; i++ ){
+            var url = pictureData.data[i].images.preview_gif.url
+            var title = pictureData.data[i].title
+            console.log( `url: ${url}` )
+            document.querySelector('#giffyList').innerHTML += `
+            <div class="card" style="width: 18rem;">
+                <img src="${url}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">${title}</h5>
+                </div>
+            </div>
+            `
+        }
+        // asyncronous tools
+        // somepoint later outputs setTimeout result...
+    }
+    giffySearch( 'snow' )
 
-            // setTimeout( function(){ console.log( `timeout expired! 5000ms` ) }, 5000 )
-            // console.log( `. finished running set-timeout` )        
-            var fetchUrl = "https://www.omdbapi.com/?apikey=trilogy&t=mad%20max";
-            console.log(`...fetching from ${fetchUrl}`);
-            var movieData = await fetch( fetchUrl ).then( r=>r.json() )
-            console.log( `. fetched movie data: `, movieData )
-
-            // You can see that if you use this
-            // movieData // returns a promise
-            // await movieData // returns a object, suggest promise only works with await since it takes longer than 1ms.
-
-            // However, await only works in async function
-            
-
-            console.log( `.. finished our script!` )
-            // asyncronous tools
-            // somepoint later outputs setTimeout result...
-        };
-
-        main();
-    </script>
+</script>
 </body>
 </html>
+
+
