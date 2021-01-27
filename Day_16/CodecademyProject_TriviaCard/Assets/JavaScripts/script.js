@@ -23,4 +23,9 @@ $(document).ready(() => {
         $('.wrong-text-three').fadeOut('slow');
         $('.frown').show();
     });
+
+    // Task 6: create an event handler for correct answer
+    $('.correct-answer').on('click', () => {
+        
+    })
 })
