@@ -6,10 +6,17 @@ $(document).ready(() => {
     });
 
     // Task 4: attach a change event handler to the <select> filed with an id of 'font'.
-    $('#id').on('change', event => {
+    $('#font').on('change', event => {
         // Task 5: use the css method to change the value of the '.preview' element's font-family property to the current value of this menu
         $('.preview').css({
             fontFamily: $(event.currentTarget).val()
         });
     });
+
+    // Task 6: do the same thing with font-weight
+    $('#weight').on('change', event => {
+        $('.preview').css({
+            fontWeight: $(event.currentTarget).val()
+        });
+    })
 })
