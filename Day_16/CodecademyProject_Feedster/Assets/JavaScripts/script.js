@@ -28,5 +28,10 @@ $(document).ready(() => {
         let remaining = 140 - post.length;
         // Task 10: add the following jQuery code.
         $('.characters').html(remaining);
+
+        // Task 11: make the '.wordcount' message turn red if the user runs out of characters.
+        if (remaining <= 0) {
+            $('.wordcount').addClass('red');
+        }
     })
 }); 
