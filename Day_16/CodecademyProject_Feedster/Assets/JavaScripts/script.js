@@ -26,5 +26,7 @@ $(document).ready(() => {
         let post = $(event.currentTarget).val();
         // Task 9: declare another variable called remaining and set it to 140 minus the length of post.
         let remaining = 140 - post.length;
+        // Task 10: add the following jQuery code.
+        $('.characters').html(remaining);
     })
 }); 
