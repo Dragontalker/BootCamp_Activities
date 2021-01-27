@@ -19,8 +19,12 @@ $(document).ready(() => {
     })
 
     // Task 6: use the .on() method to add a keyup event listener to the '.postText' element.
-    $('.postText').on('keyup', () => {
+    $('.postText').on('keyup', event => {
         // Task 7: call jQuery's .focus() method on '.postText', this will cause the <textarea> to expect typed text as soon as the page loads.
         $('.postText').focus();
+        // Task 8: declare a variable called post and set it equal to the string in the .postText element.
+        let post = $(event.currentTarget).val();
+        // Task 9: declare another variable called remaining and set it to 140 minus the length of post.
+        let remaining = 140 - post.length;
     })
 }); 
