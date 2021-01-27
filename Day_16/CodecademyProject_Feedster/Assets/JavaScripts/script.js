@@ -12,5 +12,8 @@ $(document).ready(() => {
     // Task 3: Add an event handler that adds the .btn-hover class to .btn elements when a user mouses over a .btn element.
     $('.btn').on('mouseenter', () => {
         $('.btn').addClass('btn-hover');
+    }).on('mouseleave', () => {
+        // Task 4: Chain a mouse leave event handler
+        $('.btn').removeClass('btn-hover');
     })
 }); 
