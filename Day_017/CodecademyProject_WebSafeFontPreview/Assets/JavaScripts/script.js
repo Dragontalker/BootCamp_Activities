@@ -18,5 +18,10 @@ $(document).ready(() => {
         $('.preview').css({
             fontWeight: $(event.currentTarget).val()
         });
+    });
+
+    // Task 7: use a keyup event handler to change the font-size
+    $('#size').on('keyup', event => {
+        
     })
 })
