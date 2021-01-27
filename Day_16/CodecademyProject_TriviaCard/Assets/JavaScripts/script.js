@@ -30,5 +30,10 @@ $(document).ready(() => {
         $('.frown').hide();
         // Task 8: make the smiley face appear
         $('.smiley').show();
+
+        // Task 9: make the incorrct answer fade away
+        $('.wrong-text-one').fadeOut('slow');
+        $('.wrong-text-two').fadeOut('slow');
+        $('.wrong-text-three').fadeOut('slow');
     })
 })
