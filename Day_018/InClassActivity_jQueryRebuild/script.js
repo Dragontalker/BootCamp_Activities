@@ -53,7 +53,7 @@ console.log( ` .. fetched movie info: `, movieData )
 addFavouriteButton( movieData.Title )
 
 // display it
-var movieView = document.querySelector('#movie-view')
+let movieView = $('#movie-view')
 movieView.innerHTML = `
     <div class="col-6 col-md-4 col-lg-3">
     <div class="card">
