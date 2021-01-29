@@ -20,4 +20,9 @@ class media {
     get _rating() {
         return this._rating;
     }
+
+    // Task 5: Create a setter for the isCheckedOut property.
+    set _isCheckedOut(value) {
+        this_isCheckedOut = value; 
+    }
 }
