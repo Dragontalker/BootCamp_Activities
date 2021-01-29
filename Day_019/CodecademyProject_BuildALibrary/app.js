@@ -7,4 +7,17 @@ class media {
         this._isCheckedOut = false;
         this._rating = [];
     }
+
+    // Task 4: Create getters for the title, isCheckOut, and ratings properties.
+    get title() {
+        return this._title;
+    }
+
+    get _isCheckedOut() {
+        return this._isCheckedOut;
+    }
+
+    get _rating() {
+        return this._rating;
+    }
 }
