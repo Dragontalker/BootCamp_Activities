@@ -30,4 +30,12 @@ class media {
     toggleCheckOutStatus () {
         this._isCheckedOut = !this.isCheckedOut;
     }
+    
+    // Task 7: Create a method anem getAverageRating. Return the average value of the ratings array.
+    getAverageRating () {
+        let ratingSum = this.ratings.reduce((accumulator, rating) => {
+            accumulator + rating;
+        })
+        return ratingSum / this.ratings.length;
+    }
 }
