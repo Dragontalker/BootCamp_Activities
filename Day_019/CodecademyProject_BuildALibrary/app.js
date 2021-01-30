@@ -88,3 +88,6 @@ const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly E
 
 // Task 16: Call .toggleCheckOutStatus() on this instance.
 historyOfEverything.toggleCheckOutStatus();
+
+// Task 17: Log the value saved to the isCheckedOut property in the historyOfEverything instance.
+console.log(historyOfEverything.isCheckedOut);
