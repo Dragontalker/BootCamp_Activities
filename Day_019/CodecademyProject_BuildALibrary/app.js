@@ -91,3 +91,8 @@ historyOfEverything.toggleCheckOutStatus();
 
 // Task 17: Log the value saved to the isCheckedOut property in the historyOfEverything instance.
 console.log(historyOfEverything.isCheckedOut);
+
+// Task 18: Call .addRating() three times on this instance with input 4, 5, and 5.
+historyOfEverything.addRating(4);
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(5);
