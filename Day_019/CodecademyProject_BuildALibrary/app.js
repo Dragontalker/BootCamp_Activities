@@ -33,9 +33,14 @@ class media {
     
     // Task 7: Create a method anem getAverageRating. Return the average value of the ratings array.
     getAverageRating () {
-        let ratingSum = this.ratings.reduce((accumulator, rating) => {
+        let ratingSum = this.rating.reduce((accumulator, rating) => {
             accumulator + rating;
         })
         return ratingSum / this.ratings.length;
+    }
+
+    // Task 8: Add a method name addRating that accepts one argument and uses .push() to add it to the end of the ratings array.
+    addRating (value) {
+        this._rating.push(value);
     }
 }
