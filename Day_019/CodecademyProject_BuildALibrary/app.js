@@ -47,5 +47,8 @@ class media {
 
 // Task 9: Build a Book class that extends Media.
 class Book extends media {
-    
+    // Task 10: Create a constructor that accepts three arguments, which are used to set properties that do not have default values.
+    constructor(author, title, pages) {
+        
+    }
 }
