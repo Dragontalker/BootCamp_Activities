@@ -51,5 +51,8 @@ class Book extends media {
     constructor(author, title, pages) {
         // Task 11: Call super on the first line of the Book's constructor uses.
         super(title);
+        // Task 12: Use the remaining arguments to set the author and pages properties in Book.
+        this._author = author;
+        this._pages = pages;
     }
 }
