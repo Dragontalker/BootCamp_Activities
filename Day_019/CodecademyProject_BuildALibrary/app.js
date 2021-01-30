@@ -23,7 +23,7 @@ class Media {
 
     // Task 5: Create a setter for the isCheckedOut property.
     set _isCheckedOut(value) {
-        this_isCheckedOut = value; 
+        this._isCheckedOut = value; 
     }
 
     // Task 6: Create a method name toggleCheckOutStatus that changes the value saved to the _isCheckedOut property.
@@ -46,7 +46,7 @@ class Media {
 }
 
 // Task 9: Build a Book class that extends Media.
-class Book extends media {
+class Book extends Media {
     // Task 10: Create a constructor that accepts three arguments, which are used to set properties that do not have default values.
     constructor(author, title, pages) {
         // Task 11: Call super on the first line of the Book's constructor uses.
