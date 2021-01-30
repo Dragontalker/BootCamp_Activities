@@ -114,3 +114,6 @@ speed.addRating(1);
 speed.addRating(1);
 speed.addRating(5);
 
+// Task 24: Call .getAverageRating() on speed. Log the result to the console.
+console.log(speed.getAverageRating());
+
