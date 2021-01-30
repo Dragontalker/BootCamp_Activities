@@ -105,3 +105,9 @@ const speed = new Movie('Jan de Bont', 'Speed', '116');
 
 // Task 21: Call .toggleCheckOutStatus() on the speed instance.
 speed.toggleCheckOutStatus();
+
+// Task 22: Log the value saved to the isCheckOut property in the speed instance.
+console.log(speed.isCheckedOut);
+
+
+
