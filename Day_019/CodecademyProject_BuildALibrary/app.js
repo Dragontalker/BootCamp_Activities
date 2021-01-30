@@ -25,4 +25,9 @@ class media {
     set _isCheckedOut(value) {
         this_isCheckedOut = value; 
     }
+
+    // Task 6: Create a method name toggleCheckOutStatus that changes the value saved to the _isCheckedOut property.
+    toggleCheckOutStatus () {
+        this._isCheckedOut = !this.isCheckedOut;
+    }
 }
