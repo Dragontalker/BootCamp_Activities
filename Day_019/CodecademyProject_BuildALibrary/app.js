@@ -102,3 +102,6 @@ console.log(historyOfEverything.getAverageRating());
 
 // Task 20: Create a Movie instance with the following properties.
 const speed = new Movie('Jan de Bont', 'Speed', '116');
+
+// Task 21: Call .toggleCheckOutStatus() on the speed instance.
+speed.toggleCheckOutStatus();
