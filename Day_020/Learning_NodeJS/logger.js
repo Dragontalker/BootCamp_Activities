@@ -7,5 +7,5 @@ function log(message) {
 }
 
 // Make a module to export
-module.exports.log = log;
-module.exports.url = url;
+// We can make module functiuon only
+module.exports= log;

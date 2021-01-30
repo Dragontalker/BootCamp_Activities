@@ -1,4 +1,6 @@
 // Loading log from module logger.js
-var logger = require('./logger');
+// It is better to write this require function in constant.
+const logger = require('./logger');
 
-logger.log('message');
+// By a module with only function, call this.
+logger('message');
