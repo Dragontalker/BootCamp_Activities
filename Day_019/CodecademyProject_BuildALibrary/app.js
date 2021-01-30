@@ -96,3 +96,6 @@ console.log(historyOfEverything.isCheckedOut);
 historyOfEverything.addRating(4);
 historyOfEverything.addRating(5);
 historyOfEverything.addRating(5);
+
+// Task 19: Call .getAverageRating() and log the result to console.
+console.log(historyOfEverything.getAverageRating());
