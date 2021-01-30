@@ -109,5 +109,8 @@ speed.toggleCheckOutStatus();
 // Task 22: Log the value saved to the isCheckOut property in the speed instance.
 console.log(speed.isCheckedOut);
 
-
+// Task 23: Call .addRating() three times on speed with inputs of 1, 1, and 5.
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
 
