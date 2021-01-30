@@ -44,3 +44,8 @@ class media {
         this._rating.push(value);
     }
 }
+
+// Task 9: Build a Book class that extends Media.
+class Book extends media {
+    
+}
