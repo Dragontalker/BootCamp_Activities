@@ -1,5 +1,5 @@
 // Task 1: Create an empty class called Media.
-class media {
+class Media {
     // Task 2: Create an empty constructor() method that takes on parameter.
     constructor (title) {
         // Task 3: Inside the contructor, set the values for the properties that Book, CD, and Movie share.
@@ -49,6 +49,7 @@ class media {
 class Book extends media {
     // Task 10: Create a constructor that accepts three arguments, which are used to set properties that do not have default values.
     constructor(author, title, pages) {
-        
+        // Task 11: Call super on the first line of the Book's constructor uses.
+        super(title);
     }
 }
