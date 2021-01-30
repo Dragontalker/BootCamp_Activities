@@ -99,3 +99,6 @@ historyOfEverything.addRating(5);
 
 // Task 19: Call .getAverageRating() and log the result to console.
 console.log(historyOfEverything.getAverageRating());
+
+// Task 20: Create a Movie instance with the following properties.
+const speed = new Movie('Jan de Bont', 'Speed', '116');
