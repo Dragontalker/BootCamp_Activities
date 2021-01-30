@@ -55,4 +55,13 @@ class Book extends media {
         this._author = author;
         this._pages = pages;
     }
+
+    // Task 13: Create two new getters in the Book class.
+    get author() {
+        return this._author;
+    }
+
+    get pages() {
+        return this._pages;
+    }
 }
