@@ -65,3 +65,23 @@ class Book extends media {
         return this._pages;
     }
 }
+
+// Task 14: Create a Movie class.
+class Movie extends Media {
+    constructor(director, title, runTime) {
+        super(title);
+        this._director = director;
+        this._runTime = runTime;
+    }
+
+    get director() {
+        return this._director;
+    }
+
+    get runTime() {
+        return this._runTime;
+    }
+}
+
+// Task 15: Create a Book instance with the following properties.
+const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', 544);
