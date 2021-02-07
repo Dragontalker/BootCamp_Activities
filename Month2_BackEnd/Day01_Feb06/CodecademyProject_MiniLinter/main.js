@@ -3,3 +3,7 @@ let story = 'Last weekend, I took literally the most beautiful bike ride of my l
 let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
+
+// Task 1: Split story string list into individual words and save them in a new array called storyWords.
+let storyWords = story.split(" ");
+console.log(storyWords)
