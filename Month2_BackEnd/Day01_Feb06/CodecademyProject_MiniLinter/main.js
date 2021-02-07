@@ -30,3 +30,12 @@ betterWords.forEach(word => {
     }
 });
 console.log(sentenceCount);
+
+// Task 6: create a function that logs all of information to console.
+const storyInfo = () => {
+    console.log(`In this story, there are ${storyWords.length} words and ${sentenceCount} sentence.`);
+    console.log(`The overused word: ${overusedWords[0]}, appeared ${overusedCount[0]} times.`);
+    console.log(`The overused word: ${overusedWords[1]}, appeared ${overusedCount[1]} times.`);
+    console.log(`The overused word: ${overusedWords[2]}, appeared ${overusedCount[2]} times.`);
+}
+storyInfo();
