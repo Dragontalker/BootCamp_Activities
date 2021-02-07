@@ -9,3 +9,6 @@ let storyWords = story.split(" ");
 
 // Task 2: Log how many words there are in this story to the console.
 console.log(storyWords.length);
+
+// Task 3: Filter out overused and unncessary words.
+const betterWords = storyWords.filter(word => !(overusedWords.includes(word) || unnecessaryWords.includes(word)));
