@@ -12,3 +12,12 @@ console.log(storyWords.length);
 
 // Task 3: Filter out overused and unncessary words.
 const betterWords = storyWords.filter(word => !(unnecessaryWords.includes(word)));
+
+// Task 4: Let the user of your program know how many times they have used these overusedwords.
+const wordCount = (overused) => {
+    let repeatList = betterWords.filter(word => word === overused);
+    return repeatList.length;
+}
+
+const overusedCount = overusedWords.map(word => wordCount(word));
+console.log(overusedCount);
