@@ -21,3 +21,12 @@ const wordCount = (overused) => {
 
 const overusedCount = overusedWords.map(word => wordCount(word));
 console.log(overusedCount);
+
+// Task 5: counter how many sentences are in the story.
+let sentenceCount = 0;
+betterWords.forEach(word => {
+    if (word[word.length - 1] === "." || word[word.length - 1] === "!") {
+        sentenceCount += 1;
+    }
+});
+console.log(sentenceCount);
