@@ -39,3 +39,7 @@ const storyInfo = () => {
     console.log(`The overused word: ${overusedWords[2]}, appeared ${overusedCount[2]} times.`);
 }
 storyInfo();
+
+// Task 7: Now, log the betterWords array to the console as a single string.
+const betterStory = betterWords.join(" ");
+console.log(betterStory);
