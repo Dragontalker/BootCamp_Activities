@@ -6,4 +6,6 @@ let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 // Task 1: Split story string list into individual words and save them in a new array called storyWords.
 let storyWords = story.split(" ");
-console.log(storyWords)
+
+// Task 2: Log how many words there are in this story to the console.
+console.log(storyWords.length);
