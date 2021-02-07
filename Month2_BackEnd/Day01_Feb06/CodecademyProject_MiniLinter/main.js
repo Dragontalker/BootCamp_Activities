@@ -11,4 +11,4 @@ let storyWords = story.split(" ");
 console.log(storyWords.length);
 
 // Task 3: Filter out overused and unncessary words.
-const betterWords = storyWords.filter(word => !(overusedWords.includes(word) || unnecessaryWords.includes(word)));
+const betterWords = storyWords.filter(word => !(unnecessaryWords.includes(word)));
