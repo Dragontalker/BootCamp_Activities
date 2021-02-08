@@ -27,9 +27,16 @@ class School {
             console.log("Invalid inpupt: numberOfStudents must be set to a number.");
         }
     }
+
     // Task 6: Create a method named quickFacts that logs the following string to the console:
     quickFacts() {
         console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
+    }
+
+    // Task 7: Create a static method named pickSubstitueTeacher.
+    static pickSubstituteTeacher(list) {
+        let index = Math.floor(Math.random() * list.length);
+        return list[index];
     }
 };
 
