@@ -19,7 +19,7 @@ class School {
         return this._numberOfStudents;
     }
 
-    // Create a setter for numberOfStudents, that first check if the input (newNumberOfStudents) is a number.
+    // Task 5: Create a setter for numberOfStudents, that first check if the input (newNumberOfStudents) is a number.
     set numberOfStudents(input) {
         if (typeof input === "number") {
             this._numberOfStudents = input;
@@ -27,12 +27,15 @@ class School {
             console.log("Invalid inpupt: numberOfStudents must be set to a number.");
         }
     }
+    // Task 6: Create a method named quickFacts that logs the following string to the console:
+    quickFacts() {
+        console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
+    }
 };
 
 // Test:
-let alSmith = new School('Al E. Smith', 'highschool', 415);
+let alSmith = new School('Al E. Smith', 'high', 415);
 console.log(alSmith.name);
 console.log(alSmith.level);
 console.log(alSmith.numberOfStudents)
-alSmith.numberOfStudents = 400;
-console.log(alSmith.numberOfStudents)
+console.log(alSmith.quickFacts());
