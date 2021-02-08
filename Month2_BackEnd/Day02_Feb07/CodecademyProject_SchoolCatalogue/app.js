@@ -2,6 +2,7 @@
 class School {
     // Task 2: Create an empty constructor() that accepts three parameters.
     constructor (name, level, numberOfStudents) {
+        // Task 3: set the School properties.
         this._name = name,
         this._level = level,
         this._numberOfStudents = numberOfStudents
