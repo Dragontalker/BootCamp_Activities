@@ -18,10 +18,21 @@ class School {
     get numberOfStudents() {
         return this._numberOfStudents;
     }
+
+    // Create a setter for numberOfStudents, that first check if the input (newNumberOfStudents) is a number.
+    set numberOfStudents(input) {
+        if (typeof input === "number") {
+            this._numberOfStudents = input;
+        } else {
+            console.log("Invalid inpupt: numberOfStudents must be set to a number.");
+        }
+    }
 };
 
 // Test:
 let alSmith = new School('Al E. Smith', 'highschool', 415);
 console.log(alSmith.name);
 console.log(alSmith.level);
-console.log(alSmith._numberOfStudents)
+console.log(alSmith.numberOfStudents)
+alSmith.numberOfStudents = 400;
+console.log(alSmith.numberOfStudents)
