@@ -39,8 +39,7 @@ MessageMixer.replaceFirstOccurence = function(string, toBeReplaced, replaceWith)
     return string.replace(toBeReplaced, replaceWith);
 };
 
-
-function replaceAllOccurrences(string, toBeReplaced, replaceWith) {
+MessageMixer.replaceAllOccurrences = function(string, toBeReplaced, replaceWith) {
 return string.split(toBeReplaced).join(replaceWith);
 };
 
