@@ -27,7 +27,7 @@ MessageMixer.reverseWord = function(word) {
     return word.split("").reverse().join("");
 };
 
-function reverseAllWords(sentence) {
+MessageMixer.reverseAllWords = function(sentence) {
     let words = sentence.split(" ");
     for (let i = 0; i < words.length; i++) {
         words[i] = reverseWord(words[i]);
