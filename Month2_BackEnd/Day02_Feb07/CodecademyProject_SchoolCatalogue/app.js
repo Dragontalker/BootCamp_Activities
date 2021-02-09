@@ -40,6 +40,11 @@ class School {
     }
 };
 
+// Task 8: Create an empty PrimarySchool class that extends School.
+class PrimarySchool extends School {
+    constructor()
+}
+
 // Test:
 let alSmith = new School('Al E. Smith', 'high', 415);
 console.log(alSmith.name);
