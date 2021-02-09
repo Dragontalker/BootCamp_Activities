@@ -52,12 +52,12 @@ let replacementObject = { "a": "@", "s": "$", "i": "!", "o":"0" };
 
 
 function displayMessage() {
-console.log(countCharacter("What is the color of the sky?", "t"));
-console.log(capitalizeFirstCharacterOfWords("What is the color of the sky?"));
-console.log(reverseWord("What is the color of the sky?"));
-console.log(reverseAllWords("What is the color of the sky?"));
-console.log(replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
-console.log(encode("What is the color of the sky?"));
+    console.log(countCharacter("What is the color of the sky?", "t"));
+    console.log(capitalizeFirstCharacterOfWords("What is the color of the sky?"));
+    console.log(reverseWord("What is the color of the sky?"));
+    console.log(reverseAllWords("What is the color of the sky?"));
+    console.log(replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
+    console.log(encode("What is the color of the sky?"));
 }
 
 displayMessage();
@@ -65,11 +65,9 @@ displayMessage();
 // Task 1: Run the file to see the output of th program.
 // running in node: node messageMixer.js
 // output:
-//   Error: Cannot find module 'C:\Users\Ricahrd\Desktop\GitHubRepos\messageMixer.js'       
-//     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)        
-//     at Function.Module._load (internal/modules/cjs/loader.js:725:27)
-//     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
-//     at internal/main/run_main_module.js:17:47 {
-//   code: 'MODULE_NOT_FOUND',
-//   requireStack: []
-// }
+// 3
+// What Is The Color Of The Sky?
+// ?yks eht fo roloc eht si tahW
+// tahW si eht roloc fo eht ?yks
+// What is the color of the water?
+// Wh@t !$ the c0l0r 0f the $ky?
