@@ -23,8 +23,7 @@ MessageMixer.capitalizeFirstCharacterOfWords = function(string) {
     return arr.join(" "); 
 };
 
-
-function reverseWord(word) {
+MessageMixer.reverseWord = function(word) {
     return word.split("").reverse().join("");
 };
 
