@@ -1,8 +1,11 @@
 // Task 3: Create a variable MessageMixer and set it equal to an empty object to represent the module as an object.
-const MessageMixer = {};
+// const MessageMixer = {};
+
+// Task 14: Remove the variable and export each function as a variable.
+
 
 // Task 4: One by one, for each function, modify the function so that it is a property on the object.
-MessageMixer.countCharacter = function(inputString, inputCharacter) {
+const countCharacter = (inputString, inputCharacter) => {
     let count = 0;
     let string = inputString.toLowerCase();
     let character = inputCharacter.toLowerCase();
@@ -14,7 +17,7 @@ MessageMixer.countCharacter = function(inputString, inputCharacter) {
     return count; 
 };
   
-MessageMixer.capitalizeFirstCharacterOfWords = function(string) {
+const capitalizeFirstCharacterOfWords = (string) => {
     let arr = string.split(" ");  
     for (let i = 0; i < arr.length; i++) {  
     let word = arr[i];
@@ -23,60 +26,60 @@ MessageMixer.capitalizeFirstCharacterOfWords = function(string) {
     return arr.join(" "); 
 };
 
-MessageMixer.reverseWord = function(word) {
+const reverseWord = (word) => {
     return word.split("").reverse().join("");
 };
 
-MessageMixer.reverseAllWords = function(sentence) {
+const reverseAllWords = (sentence) => {
     let words = sentence.split(" ");
     for (let i = 0; i < words.length; i++) {
-        words[i] = MessageMixer.reverseWord(words[i]);
+        words[i] = reverseWord(words[i]);
     }
     return words.join(" ");
 };
 
-MessageMixer.replaceFirstOccurence = function(string, toBeReplaced, replaceWith) {
+const replaceFirstOccurence = (string, toBeReplaced, replaceWith) => {
     return string.replace(toBeReplaced, replaceWith);
 };
 
-MessageMixer.replaceAllOccurrences = function(string, toBeReplaced, replaceWith) {
+const replaceAllOccurrences = (string, toBeReplaced, replaceWith) => {
     return string.split(toBeReplaced).join(replaceWith);
 };
 
-MessageMixer.encode = function(string) {
+const encode = (string) => {
     let replacementObject = { "a": "@", "s": "$", "i": "!", "o":"0" };
     for (let key in replacementObject) {
-        string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]); 
+        string = replaceAllOccurrences(string, key, replacementObject[key]); 
     }	
     return string;
 };
 
 // Task 9: Create a function called palindrome() that takes a string string as a parameter.
-MessageMixer.palindrome = function(string) {
-    return string + " " + MessageMixer.reverseWord(string);
+const palindrome = (string) => {
+    return string + " " + reverseWord(string);
 };
 
 // Task 10: Create another function pigLatin() that takes a sentence and a character as parameter.
-MessageMixer.pigLatin = function(sentence, character) {
+const pigLatin = (sentence, character) => {
     return sentence.split(' ').join(character + ' ');
 };
 
 
 
 function displayMessage() {
-    console.log(MessageMixer.countCharacter("What is the color of the sky?", "t"));
-    console.log(MessageMixer.capitalizeFirstCharacterOfWords("What is the color of the sky?"));
-    console.log(MessageMixer.reverseWord("What is the color of the sky?"));
-    console.log(MessageMixer.reverseAllWords("What is the color of the sky?"));
-    console.log(MessageMixer.replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
-    console.log(MessageMixer.encode("What is the color of the sky?"));
+    console.log(countCharacter("What is the color of the sky?", "t"));
+    console.log(capitalizeFirstCharacterOfWords("What is the color of the sky?"));
+    console.log(reverseWord("What is the color of the sky?"));
+    console.log(reverseAllWords("What is the color of the sky?"));
+    console.log(replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
+    console.log(encode("What is the color of the sky?"));
 }
 
 displayMessage();
 
 
 // Task 5: Encode all functions.
-console.log(MessageMixer);
+// console.log(MessageMixer);
 
 // Task 1: Run the file to see the output of th program.
 // running in node: node messageMixer.js
