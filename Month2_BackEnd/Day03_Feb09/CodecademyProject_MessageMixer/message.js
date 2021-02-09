@@ -2,7 +2,7 @@
 // const MessageMixer = require('./messageMixer');
 
 // Task 12: Use the import keyword to import the MessageMixer module.
-import MessageMixer from './messageMixer';
+import MessageMixer from "./messageMixer";
 
 // Task 2: Coppy the displayMessage() function and the displayMessage() function call and paste it in message.js.
 function displayMessage() {
@@ -13,6 +13,9 @@ function displayMessage() {
     console.log(MessageMixer.reverseAllWords("What is the color of the sky?"));
     console.log(MessageMixer.replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
     console.log(MessageMixer.encode("What is the color of the sky?"));
+    // Task 13: Use console.log() to display the output of palindrome()) function. You will need to pass the functions a string.
+    console.log(MessageMixer.palindrome("What is the color of the sky?"));
+    console.log(MessageMixer.pigLatin("What is the color of the sky?", "$"));
 }
 
 displayMessage();
