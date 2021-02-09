@@ -51,9 +51,14 @@ MessageMixer.encode = function(string) {
     return string;
 };
 
-// Task 9.a: Create a function called palindrome() that takes a string string as a parameter.
+// Task 9: Create a function called palindrome() that takes a string string as a parameter.
 MessageMixer.palindrome = function(string) {
     return string + " " + MessageMixer.reverseWord(string);
+};
+
+// Task 10: Create another function pigLatin() that takes a sentence and a character as parameter.
+MessageMixer.pigLatin = function(sentence, character) {
+    return sentence.split(' ').join(character + ' ');
 };
 
 
