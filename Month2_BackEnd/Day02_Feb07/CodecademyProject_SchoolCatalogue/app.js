@@ -72,3 +72,6 @@ const lorrainHansbury = new School('Lorraine Hansbury', 514, 'Students must be p
 
 // Task 15: Call .quickFacts() on the lorrainHansburry instance.
 lorrainHansbury.quickFacts();
+
+// Task 16: Call .pickSubstituteTeacher() on School.
+lorrainHansbury.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']);
