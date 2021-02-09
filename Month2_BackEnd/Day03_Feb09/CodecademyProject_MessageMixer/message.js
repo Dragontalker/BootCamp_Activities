@@ -2,7 +2,20 @@
 // const MessageMixer = require('./messageMixer');
 
 // Task 12: Use the import keyword to import the MessageMixer module.
-import MessageMixer from "./messageMixer";
+// import MessageMixer from "./messageMixer";
+
+// Task 16: Modify the program ti impoirt each of the variable.
+import {
+    countCharacter,
+    capitalizeFirstCharacterOfWords,
+    reverseWord,
+    reverseAllWords,
+    replaceFirstOccurence,
+    replaceAllOccurrences,
+    encode,
+    palindrome,
+    pigLatin
+} from "./messageMixer";
 
 // Task 2: Coppy the displayMessage() function and the displayMessage() function call and paste it in message.js.
 function displayMessage() {
