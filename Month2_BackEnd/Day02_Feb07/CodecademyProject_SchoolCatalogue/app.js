@@ -67,9 +67,6 @@ class Highschool extends School {
     }
 }
 
-// Test:
-let alSmith = new School('Al E. Smith', 'high', 415);
-console.log(alSmith.name);
-console.log(alSmith.level);
-console.log(alSmith.numberOfStudents)
-console.log(alSmith.quickFacts());
+// Task 14:
+const lorrainHansbury = new School('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
+
