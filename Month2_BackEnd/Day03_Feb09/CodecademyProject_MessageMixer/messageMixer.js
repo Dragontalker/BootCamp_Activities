@@ -30,7 +30,7 @@ MessageMixer.reverseWord = function(word) {
 MessageMixer.reverseAllWords = function(sentence) {
     let words = sentence.split(" ");
     for (let i = 0; i < words.length; i++) {
-        words[i] = reverseWord(words[i]);
+        words[i] = MessageMixer.reverseWord(words[i]);
     }
     return words.join(" ");
 };
@@ -40,25 +40,25 @@ MessageMixer.replaceFirstOccurence = function(string, toBeReplaced, replaceWith)
 };
 
 MessageMixer.replaceAllOccurrences = function(string, toBeReplaced, replaceWith) {
-return string.split(toBeReplaced).join(replaceWith);
+    return string.split(toBeReplaced).join(replaceWith);
 };
 
 MessageMixer.encode = function(string) {
-let replacementObject = { "a": "@", "s": "$", "i": "!", "o":"0" };
+    let replacementObject = { "a": "@", "s": "$", "i": "!", "o":"0" };
     for (let key in replacementObject) {
-    string = replaceAllOccurrences(string, key, replacementObject[key]); 
+        string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]); 
     }	
     return string;
 };
 
 
 function displayMessage() {
-    console.log(countCharacter("What is the color of the sky?", "t"));
-    console.log(capitalizeFirstCharacterOfWords("What is the color of the sky?"));
-    console.log(reverseWord("What is the color of the sky?"));
-    console.log(reverseAllWords("What is the color of the sky?"));
-    console.log(replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
-    console.log(encode("What is the color of the sky?"));
+    console.log(MessageMixer.countCharacter("What is the color of the sky?", "t"));
+    console.log(MessageMixer.capitalizeFirstCharacterOfWords("What is the color of the sky?"));
+    console.log(MessageMixer.reverseWord("What is the color of the sky?"));
+    console.log(MessageMixer.reverseAllWords("What is the color of the sky?"));
+    console.log(MessageMixer.replaceFirstOccurence("What is the color of the sky?", "sky", "water"));
+    console.log(MessageMixer.encode("What is the color of the sky?"));
 }
 
 displayMessage();
