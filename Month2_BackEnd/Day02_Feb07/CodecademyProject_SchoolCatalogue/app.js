@@ -68,10 +68,13 @@ class Highschool extends School {
 }
 
 // Task 14:
-const lorrainHansbury = new School('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
+const lorrainHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
 
 // Task 15: Call .quickFacts() on the lorrainHansburry instance.
 lorrainHansbury.quickFacts();
 
 // Task 16: Call .pickSubstituteTeacher() on School.
 lorrainHansbury.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']);
+
+// Task 17: Create a  HighSchool instance.
+const alSmith = new Highschool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
