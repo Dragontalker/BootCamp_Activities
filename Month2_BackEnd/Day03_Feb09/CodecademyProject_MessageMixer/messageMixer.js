@@ -63,6 +63,10 @@ function displayMessage() {
 
 displayMessage();
 
+
+// Task 5: Encode all functions.
+console.log(MessageMixer);
+
 // Task 1: Run the file to see the output of th program.
 // running in node: node messageMixer.js
 // output:
