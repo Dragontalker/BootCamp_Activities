@@ -8,5 +8,7 @@ const fs = require('fs');
 // The third argument takes any error message that would result from the operation.
 fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
   // TODO: Describe how this ternary operator works
+  // The ternary operator is just a short syntax form of if statement, just like:
+  // if (err) {console.log(err)} else {console.log('Commit logged!')}
   err ? console.error(err) : console.log('Commit logged!')
 );
