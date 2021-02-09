@@ -42,7 +42,10 @@ class School {
 
 // Task 8: Create an empty PrimarySchool class that extends School.
 class PrimarySchool extends School {
-    constructor()
+    // Task 9: Create a constructor() that accepts three arguments.
+    constructor(name, level, numberOfStudents) {
+
+    }
 }
 
 // Test:
