@@ -89,4 +89,7 @@ console.log(MessageMixer);
 // Wh@t !$ the c0l0r 0f the $ky?
 
 // Task 6: You messageFixer object now has properties. Export it using module.exports syntax.
-module.exports = MessageMixer;
+// module.exports = MessageMixer;
+
+// Task 11: Use modify the way export MessageMixer to use export default instead of modeul.exports.
+export default MessageMixer;
