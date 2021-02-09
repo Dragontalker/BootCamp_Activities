@@ -95,4 +95,17 @@ displayMessage();
 // module.exports = MessageMixer;
 
 // Task 11: Use modify the way export MessageMixer to use export default instead of modeul.exports.
-export default MessageMixer;
+// export default MessageMixer;
+
+// Task 15: Use the export statement at the bottom of the file, export each of the function by their variable named between two {}.
+export {
+    countCharacter,
+    capitalizeFirstCharacterOfWords,
+    reverseWord,
+    reverseAllWords,
+    replaceFirstOccurence,
+    replaceAllOccurrences,
+    encode,
+    palindrome,
+    pigLatin
+};
