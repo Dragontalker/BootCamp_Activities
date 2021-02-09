@@ -56,6 +56,17 @@ class PrimarySchool extends School {
     }
 }
 
+// Task 13: Create a Highschool class that extends the School class.
+class Highschool extends School {
+    constructor(name, level, numberOfStudents, sportsTeams) {
+        super(name, 'high', numberOfStudents);
+        this._sportsTeams = sportsTeam;
+    }
+    get sportsTeam() {
+        return this._sportsTeams;
+    }
+}
+
 // Test:
 let alSmith = new School('Al E. Smith', 'high', 415);
 console.log(alSmith.name);
