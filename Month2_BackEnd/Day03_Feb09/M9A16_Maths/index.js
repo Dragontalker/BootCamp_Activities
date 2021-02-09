@@ -1,4 +1,5 @@
 // TODO: Import `maths.js`
+const Math = require('./maths');
 
 // TODO: Capture the values passed from the command line into these three variables: `operation`, `numOne` and `numTwo`
 
