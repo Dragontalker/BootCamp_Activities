@@ -33,3 +33,6 @@ console.log(additionSpread(1, 2, 3));
 // TODO: What do you expect to be logged in the console?
 // the expected value of output is 110.
 console.log(additionSpread(1, 2, 3, 4, 100));
+
+// Bonus: What other data types can you use the spread operator or rest parameters on?
+// Answer: the spread and rest operators work on list or object data types.
