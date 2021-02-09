@@ -44,8 +44,14 @@ class School {
 class PrimarySchool extends School {
     // Task 9: Create a constructor() that accepts three arguments.
     constructor(name, numberOfStudents, pickupPolicy) {
+        // Task 10: Call super on the first line of the PrimarySchool's constructor().
         super(name, 'Primary', numberOfStudents);
         this._pickupPolicy = pickupPolicy;
+    }
+
+    // Task 11: Use the remaining arugment to set the pickupPolicy property.
+    get pickupPolicy() {
+        return this._pickupPolicy;
     }
 }
 
