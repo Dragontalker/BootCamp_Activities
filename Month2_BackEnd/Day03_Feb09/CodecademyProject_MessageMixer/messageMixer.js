@@ -76,3 +76,6 @@ console.log(MessageMixer);
 // tahW si eht roloc fo eht ?yks
 // What is the color of the water?
 // Wh@t !$ the c0l0r 0f the $ky?
+
+// Task 6: You messageFixer object now has properties. Export it using module.exports syntax.
+module.exports = MessageMixer;
