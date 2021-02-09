@@ -51,6 +51,12 @@ MessageMixer.encode = function(string) {
     return string;
 };
 
+// Task 9.a: Create a function called palindrome() that takes a string string as a parameter.
+MessageMixer.palindrome = function(string) {
+    return string + " " + MessageMixer.reverseWord(string);
+};
+
+
 
 function displayMessage() {
     console.log(MessageMixer.countCharacter("What is the color of the sky?", "t"));
