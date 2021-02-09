@@ -1,7 +1,8 @@
 // Task 3: Create a variable MessageMixer and set it equal to an empty object to represent the module as an object.
 const MessageMixer = {};
 
-function countCharacter(inputString, inputCharacter) {
+// Task 4: One by one, for each function, modify the function so that it is a property on the object.
+MessageMixer.countCharacter = function(inputString, inputCharacter) {
     let count = 0;
     let string = inputString.toLowerCase();
     let character = inputCharacter.toLowerCase();
@@ -11,7 +12,7 @@ function countCharacter(inputString, inputCharacter) {
         }
       }
     return count; 
-  };
+};
   
 function capitalizeFirstCharacterOfWords(string) {
     let arr = string.split(" ");  
