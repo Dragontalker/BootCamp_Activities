@@ -78,3 +78,6 @@ lorrainHansbury.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. 
 
 // Task 17: Create a  HighSchool instance.
 const alSmith = new Highschool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
+
+// Task 18: Get the value saved to the sportsTeams property in alSmith.
+console.log(alSmith.sportsTeam);
