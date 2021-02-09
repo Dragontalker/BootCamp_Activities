@@ -43,7 +43,7 @@ MessageMixer.replaceAllOccurrences = function(string, toBeReplaced, replaceWith)
 return string.split(toBeReplaced).join(replaceWith);
 };
 
-function encode(string) {
+MessageMixer.encode = function(string) {
 let replacementObject = { "a": "@", "s": "$", "i": "!", "o":"0" };
     for (let key in replacementObject) {
     string = replaceAllOccurrences(string, key, replacementObject[key]); 
