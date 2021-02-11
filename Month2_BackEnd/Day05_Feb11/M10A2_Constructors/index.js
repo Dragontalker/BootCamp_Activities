@@ -11,5 +11,7 @@ function Developer(name, tech) {
 
 
 // TODO: Create a new object using the 'Developer' constructor
+const richard = new Developer('Richard', 'TypeScript');
 
 // TODO: Call the 'introduction()' method on the new object
+richard.introduction();
