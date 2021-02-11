@@ -15,7 +15,7 @@ Character.prototype.printStats = function () {
   console.log('\n-------------\n');
 };
 
-// TODO: Add a comment describing the functionality of this method
+// 3rd TODO: This is a method that prints living status based on the remaining hitpoint property.
 Character.prototype.isAlive = function () {
   if (this.hitpoints > 0) {
     console.log(`${this.name} is still alive!`);
