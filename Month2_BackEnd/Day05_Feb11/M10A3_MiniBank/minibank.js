@@ -77,3 +77,7 @@ bank.printBalance();
 
 // Task 2.4: Print the `bank` balance.
 bank.printStatement();
+
+// Task 2.5: Withdraw some money from the `bank` object.
+bank.withdraw(20);
+bank.printBalance();
