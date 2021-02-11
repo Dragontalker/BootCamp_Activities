@@ -24,6 +24,15 @@ class Store {
   welcome() {
     console.log(`Welcome to ${this.name}!`);
   };
+
+  processProductSale(product) {
+    if (product.count <= 0) {
+      console.log(`There is no more stock for ${product.name}`);
+    } else {
+      this._revenue += product.price;
+      product.count --;
+    }
+  }
 }
 
 // Test: 
