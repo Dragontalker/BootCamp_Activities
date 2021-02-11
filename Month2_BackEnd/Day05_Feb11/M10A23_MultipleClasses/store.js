@@ -1,47 +1,40 @@
 class Store {
-  constructor(name, stock, revenue) {
-    this._name = name;
-    this._stock = stock;
-    this._revenue = revenue;
-  };
+  constructor(name, stock) {
+    this.name = name;
+    this.stock = stock;
+    this.revenue = 0;
+  }
 
-  get name() {
-    return this._name;
-  };
+  processProductSale(name) {
+    this.stock.forEach(item => {
+      if (item.name === name) {
+        if (item.count > 0) {
+          item.count--;
+          this.revenue += item.price;
+          console.log(`Purchased ${item.name} for ${item.price}`);
+        } else {
+          console.log(`Sorry, ${item.name} is out of stock!`);
+        }
+      }
+    });
+  }
 
-  get stock() {
-    return this._stock;
-  };
-
-  get revenue() {
-    return this._revenue;
-  };
+  replenishStock(name, count) {
+    this.stock.forEach(item => {
+      if (item.name === name) {
+        item.count += count;
+        console.log(`Replenished ${item.name} by ${item.count}`);
+      }
+    });
+  }
 
   printRevenue() {
     console.log(`The revenue so far is ${this.revenue}`);
-  };
+  }
 
   welcome() {
     console.log(`Welcome to ${this.name}!`);
-  };
-
-  processProductSale(product) {
-    if (product.count <= 0) {
-      console.log(`There is no more stock for ${product.name}`);
-    } else {
-      this._revenue += product.price;
-      product.count --;
-    }
   }
 }
-
-// Test: 
-const walMart = new Store('Wal-Mart', 500, 40000);
-console.log(walMart.name);
-console.log(walMart.stock);
-console.log(walMart.revenue);
-walMart.printRevenue();
-walMart.welcome();
-
 
 module.exports = Store;
