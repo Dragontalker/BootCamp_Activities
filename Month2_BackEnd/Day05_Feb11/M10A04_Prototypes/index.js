@@ -26,7 +26,7 @@ Character.prototype.isAlive = function () {
   return false;
 };
 
-// TODO: Add a comment describing the functionality of this method
+// 4th TODO: This is a method that updates the target object's property.
 Character.prototype.attack = function (character2) {
   character2.hitpoints -= this.strength;
 };
