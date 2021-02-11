@@ -1,4 +1,4 @@
-// This is a constructior function that creates an object with inputs as its properties.
+// 1st TODO: This is a constructior function that creates an object with inputs as its properties.
 function Character(name, type, age, strength, hitpoints) {
   this.name = name;
   this.type = type;
@@ -7,7 +7,7 @@ function Character(name, type, age, strength, hitpoints) {
   this.hitpoints = hitpoints;
 }
 
-// TODO: Add a comment describing the purpose of `.prototype` in this method declaration
+// 2nd TODO: This is a method that prints all the stats of the character.
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
