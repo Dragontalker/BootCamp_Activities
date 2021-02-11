@@ -67,3 +67,6 @@ function MiniBank(balance) {
 
 // Task 2.1: Create a new `bank` object using the `MiniBank` constructor function.
 const bank = new MiniBank(0);
+
+// Task 2.2: Print the `bank` balance.
+bank.printStatement();
