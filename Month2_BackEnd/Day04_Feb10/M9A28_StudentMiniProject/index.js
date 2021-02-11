@@ -63,6 +63,7 @@ const generateHTML = (answers) =>
 </body>
 </html>`;
 
+// Just testing out the comments.
 promptUser()
   .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
   .then(() => console.log('Successfully wrote to index.html'))
