@@ -74,4 +74,6 @@ bank.printStatement();
 // Task 2.3: Deposit some money into the `bank` object.
 bank.deposit(85);
 bank.printBalance();
+
+// Task 2.4: Print the `bank` balance.
 bank.printStatement();
