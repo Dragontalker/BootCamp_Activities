@@ -31,14 +31,30 @@ function MiniBank(balance) {
   // Task 1.6: Write a `deposit` function that takes a value and performs the following:
   // - Calls `updateStatement` to record the deposit transaction.
   // - Calls `setBalance` to update the `balance` property.
-  const deposit = (value) => {
+  this.deposit = (value) => {
+      if (typeof value !== 'number' || value <= 0) {
+        throw new Error("'value' must be a positive number!");
+      }
+      const newBalance = this.getBalance() + value;
+      this.setBalance(newBalance);
+      this.updateStatement(newBalance);
+      console.log(`Deposited ${value}!`);
+    };
+
+  // Task 1.7: Write a `withdraw` function that takes a value and performs the following:
+  // - Calls `updateStatement` to record the withdrawal transaction. (Be sure to use a negative number here.)
+  // - Calls `setBalance` to update the `balance` property.
+  this.withdraw = (value) => {
     if (typeof value !== 'number' || value <= 0) {
-      throw new Error("'value' must be a positive number!");
+      throw new Error("'value' must be a positive number");
     }
-    const newBalance = this.getBalance() + value;
+    const newBalance = this.getBalance() - value;
+    if (newBalance < 0) {
+      throw new Error('Insufficient funds for this transaction');
+    }
     this.setBalance(newBalance);
-    this.updateStatement(newBalance);
-    console.log(`Deposited ${value}!`);
+    this.updateStatement(-value);
+    console.log(`Withdrew ${value}!`);
   };
 
   this.getBalance = () => {
