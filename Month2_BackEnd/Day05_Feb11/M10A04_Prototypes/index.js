@@ -1,4 +1,4 @@
-// TODO: Add a comment describing what kind of function this is
+// This is a constructior function that creates an object with inputs as its properties.
 function Character(name, type, age, strength, hitpoints) {
   this.name = name;
   this.type = type;
