@@ -22,6 +22,7 @@ function MiniBank(balance) {
 
   // Task 1.5: Write a `printStatement` function that prints each element in the `statement` array on its own line.
   this.printStatement = () => {
+    // Bonus 2: - Add code to return a copy of the `statement` array when `getStatement` is called, rather than returning the original array.
     const statement = this.getStatement();
     for (let i = 0; i < statement.length; i++) {
       console.log(`${i+1}. ${statement[i]}`);
@@ -32,6 +33,7 @@ function MiniBank(balance) {
   // - Calls `updateStatement` to record the deposit transaction.
   // - Calls `setBalance` to update the `balance` property.
   this.deposit = (value) => {
+      // Bonus 1: - Add code to throw an error if the user tries to withdraw more money than they have, or try to deposit or withdraw values that aren't positive numbers.
       if (typeof value !== 'number' || value <= 0) {
         throw new Error("'value' must be a positive number!");
       }
