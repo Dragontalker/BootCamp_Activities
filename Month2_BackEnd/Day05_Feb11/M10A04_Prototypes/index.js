@@ -31,7 +31,7 @@ Character.prototype.attack = function (character2) {
   character2.hitpoints -= this.strength;
 };
 
-// TODO: Add a comment describing the functionality of this method
+// 5th TODO: This is a method that updates the object's own property.
 Character.prototype.levelUp = function () {
   this.age += 1;
   this.strength += 5;
