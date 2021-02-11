@@ -54,5 +54,5 @@ warrior.isAlive();
 
 rogue.levelUp();
 
-// TODO: Add a comment describing what you expect to see printed in the console
+// 8th TODO: after leveling up, the age will be 24, strength will be 25, hitpoints will be 75.
 rogue.printStats();
