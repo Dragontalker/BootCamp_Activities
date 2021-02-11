@@ -49,7 +49,7 @@ rogue.attack(warrior);
 // 6th TODO: rogue has a strength of 20, warrior's hitpoint will drop to 55.
 warrior.printStats();
 
-// TODO: Add a comment describing what you expect to see printed in the console
+// 7th TODO: since warrior still have 55 hitpoints left, he is alive. 
 warrior.isAlive();
 
 rogue.levelUp();
