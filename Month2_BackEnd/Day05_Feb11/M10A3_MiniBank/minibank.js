@@ -70,3 +70,8 @@ const bank = new MiniBank(0);
 
 // Task 2.2: Print the `bank` balance.
 bank.printStatement();
+
+// Task 2.3: Deposit some money into the `bank` object.
+bank.deposit(85);
+bank.printBalance();
+bank.printStatement();
