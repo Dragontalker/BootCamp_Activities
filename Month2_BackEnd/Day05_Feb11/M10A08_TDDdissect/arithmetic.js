@@ -19,3 +19,6 @@ Arithmetic.prototype.value = function() {
 };
 
 module.exports = Arithmetic;
+
+// Task 3: What do you think of the significance of the `pluse` and `minus` methods returning `new Arithmetic` is?
+// By taking the number from input object and perform operation, plus and minue also create new object.
