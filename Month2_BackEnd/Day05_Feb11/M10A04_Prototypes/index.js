@@ -46,7 +46,7 @@ rogue.printStats();
 
 rogue.attack(warrior);
 
-// TODO: Add a comment describing what you expect to see printed in the console
+// 6th TODO: rogue has a strength of 20, warrior's hitpoint will drop to 55.
 warrior.printStats();
 
 // TODO: Add a comment describing what you expect to see printed in the console
