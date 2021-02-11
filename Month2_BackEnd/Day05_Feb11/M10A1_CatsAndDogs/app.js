@@ -19,3 +19,14 @@ const cat = {
         }
     }
 };
+
+
+// Test:
+dog.makeNoise();
+cat.makeNoise();
+
+// How to make cat noise?
+cat.raining = true;
+dog.makeNoise();
+cat.makeNoise();
+
