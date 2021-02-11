@@ -18,6 +18,12 @@ class Toy {
   };
 };
 
+// Test 1:
+const actionFigure = new Toy('Action Figure', 14.99, 5);
+console.log(actionFigure.name);
+console.log(actionFigure.price);
+console.log(actionFigure.count);
+
 const toys = [
   new Toy("Action Figure", 14.99, 5),
   new Toy("Rare Toy", 17.99, 1)
