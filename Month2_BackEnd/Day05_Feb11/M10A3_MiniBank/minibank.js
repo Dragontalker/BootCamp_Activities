@@ -64,3 +64,6 @@ function MiniBank(balance) {
     console.log(`Balance: ${this.getBalance()}`);
   };
 }
+
+// Task 2.1: Create a new `bank` object using the `MiniBank` constructor function.
+const bank = new MiniBank(0);
