@@ -10,6 +10,11 @@ function MiniBank(balance) {
     this.balance = value;
   }
 
+  // Task 1.3:  Write an `updateStatement` function that takes in a number and pushes it to the `statement` array.
+  this.updateStatement = (value) => {
+    this.statement.push(value);
+  }
+
   this.getBalance = () => {
     return this.balance;
   };
