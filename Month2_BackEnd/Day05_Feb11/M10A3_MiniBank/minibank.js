@@ -15,6 +15,11 @@ function MiniBank(balance) {
     this.statement.push(value);
   }
 
+  // Task 1.4: Write a `getStatement` function that returns the `statement` property.
+  this.getStatement = () => {
+    return this.statement;
+  }
+
   this.getBalance = () => {
     return this.balance;
   };
