@@ -43,3 +43,16 @@ const DigitalPal = function() {
       console.log("Not right now. Maybe later?");
     }
   };
+
+  // Prototype method: destroyFurniture.
+  DigitalPal.prototype.destroyFurniture = function() {
+    if (this.houseQuality - 10 > 0) {
+      this.houseQuality -= 10;
+      this.bored = false;
+      this.sleepy = true;
+      console.log("MUAHAHAHAHA! TAKE THAT FURNITURE!");
+    }
+    else {
+      console.log("I've already destroyed it all!");
+    }
+  };
