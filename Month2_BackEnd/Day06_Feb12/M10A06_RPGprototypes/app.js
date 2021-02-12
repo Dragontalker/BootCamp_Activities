@@ -28,3 +28,12 @@ Character.prototype.printStats = function() {
     console.log(`HitPoints: ${this.hitpoints}`);
     console.log("-------------");
 }
+
+// Test case 1:
+warrior.printStats();
+
+// Test case 2:
+rogue.printStats();
+
+// Test case 3:
+mage.printStats();
