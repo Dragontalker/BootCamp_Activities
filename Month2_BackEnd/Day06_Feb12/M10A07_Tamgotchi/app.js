@@ -80,4 +80,14 @@ const DigitalPal = function() {
       console.log("We're already outside though...");
     }
   };
-  
+
+  // Prototype method: letInside.
+  DigitalPal.prototype.letInside = function() {
+    if (this.outside) {
+      console.log("Aww... Do I have to?");
+      this.outside = false;
+    }
+    else {
+      console.log("We're already inside though...");
+    }
+  };
