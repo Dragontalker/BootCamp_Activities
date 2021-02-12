@@ -25,7 +25,8 @@ Character.prototype.printStats = function() {
     console.log("-------------");
     console.log(`Name: ${this.name}`);
     console.log(`Profession: ${this.profession}`);
-    console.log(`Age: ${this.level}`);
+    console.log(`Level: ${this.level}`);
+    console.log(`Strength: ${this.strength}`);
     console.log(`HitPoints: ${this.hitpoints}`);
     console.log("-------------");
 }
@@ -71,3 +72,8 @@ Character.prototype.levelUp = function() {
 	this.strength += 5;
 	this.hitpoints += 25;
 };
+
+// Test case:
+warrior.printStats();
+warrior.levelUp();
+warrior.printStats();
