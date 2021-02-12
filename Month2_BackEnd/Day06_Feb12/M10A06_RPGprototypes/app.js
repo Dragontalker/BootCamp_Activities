@@ -77,3 +77,8 @@ Character.prototype.levelUp = function() {
 warrior.printStats();
 warrior.levelUp();
 warrior.printStats();
+
+// Prototype method: attack.
+Character.prototype.attack = function(character2) {
+	character2.hitpoints -= this.strength;
+};
