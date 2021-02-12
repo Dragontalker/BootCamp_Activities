@@ -1,8 +1,20 @@
 // Constructor function:
-function Character(name, profession, age, strength, hitpoitns) {
+function Character(name, profession, age, strength, hitpoints) {
     this.name = name;
     this.profession = profession;
     this.age = age;
     this.strength = strength;
     this.hitpoints = hitpoints;
 }
+
+// Test case 1:
+const warrior = new Character("Crusher", "Warrior", 25, 10, 75);
+console.log(warrior);
+
+// Test case 2:
+const rogue = new Character("Dodger", "Rogue", 23, 20, 50);
+console.log(rogue);
+
+// Test case 3:
+const mage = new Character("Enigma", "Mage",31, 30, 25);
+console.log(mage);
