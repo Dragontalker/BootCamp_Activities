@@ -96,3 +96,8 @@ const DigitalPal = function() {
   DigitalPal.prototype.bark = function() {
     console.log("Woof! Woof!");
   };
+
+  // Prototype method: meow.
+  DigitalPal.prototype.meow = function() {
+    console.log("Meow! Meow!");
+  };
