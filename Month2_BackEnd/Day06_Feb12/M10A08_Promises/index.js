@@ -15,7 +15,7 @@ const studentDistracted = userInput !== 'coding';
 
 
 const practiceCoding = () => {
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     if (studentDistracted) {
       reject(new Error('Coding stopped - Student is ditracted'))
     } 
@@ -24,9 +24,7 @@ const practiceCoding = () => {
   
 };
 
-const callback = (message) => console.log(message);
-const errorCallback = (message) => console.log(message);
-
-// TODO: Refactor to call 'practiceCoding()' and chain a 'then()' to log "We are coding in promises!" in the console
-// TODO: Chain a 'catch()' to log "Promise rejected: " and the error
-practiceCoding(callback, errorCallback);
+// Test:
+practiceCoding()
+  .then((res) => console.log(`${res} which is in promise!`))
+  .catch((err) => console.error(`Promise rejected: ${err}`));
