@@ -66,3 +66,8 @@ mage.isAlive();
 
 
 // Prototype method: levelUp.
+Character.prototype.levelUp = function() {
+	this.level += 1;
+	this.strength += 5;
+	this.hitpoints += 25;
+};
