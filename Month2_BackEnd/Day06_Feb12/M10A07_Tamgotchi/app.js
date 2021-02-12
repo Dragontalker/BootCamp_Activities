@@ -63,3 +63,8 @@ const DigitalPal = function() {
     console.log("Are you sure that's a good idea?");
   };
   
+  // Prototype method: increaseAge.
+  DigitalPal.prototype.increaseAge = function() {
+    this.age++;
+    console.log("Happy Birthday to me! I am " + this.age + " old!");
+  };
