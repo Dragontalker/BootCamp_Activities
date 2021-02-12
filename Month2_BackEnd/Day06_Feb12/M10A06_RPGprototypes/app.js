@@ -82,3 +82,14 @@ warrior.printStats();
 Character.prototype.attack = function(character2) {
 	character2.hitpoints -= this.strength;
 };
+
+// Test:
+warrior.printStats();
+rogue.printStats();
+
+rogue.attack(warrior);
+warrior.printStats();
+warrior.isAlive();
+
+rogue.levelUp();
+rogue.printStats();
