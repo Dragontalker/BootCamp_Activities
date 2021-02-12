@@ -52,3 +52,12 @@ Character.prototype.isAlive = function() {
 	return false;
     }
 }
+
+// Test case 1:
+warrior.isAlive();
+
+// Test case 2:
+rogue.isAlive();
+
+// Test case 3:
+mage.isAlive();
