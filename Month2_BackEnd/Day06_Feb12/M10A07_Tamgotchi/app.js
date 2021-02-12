@@ -91,3 +91,8 @@ const DigitalPal = function() {
       console.log("We're already inside though...");
     }
   };
+
+  // Prototype method: bark.
+  DigitalPal.prototype.bark = function() {
+    console.log("Woof! Woof!");
+  };
