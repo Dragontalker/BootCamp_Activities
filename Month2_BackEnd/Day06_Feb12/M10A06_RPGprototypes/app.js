@@ -21,8 +21,10 @@ console.log(mage);
 
 // Prototype method: printStats.
 Character.prototype.printStats = function() {
+    console.log("-------------");
     console.log(`Name: ${this.name}`);
     console.log(`Profession: ${this.profession}`);
     console.log(`Age: ${this.age}`);
     console.log(`HitPoints: ${this.hitpoints}`);
+    console.log("-------------");
 }
