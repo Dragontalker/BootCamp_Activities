@@ -37,3 +37,18 @@ rogue.printStats();
 
 // Test case 3:
 mage.printStats();
+
+// Prototype method: isAlive.
+Character.prototype.isAlive = function() {
+    if (this.hitpoints > 0) {
+        console.log("\n-------------\n");
+		console.log(this.name + " is still alive!");
+		console.log("\n-------------\n");
+		return true;
+	} else {
+        console.log("\n-------------\n");
+        console.log(this.name + " has died!");
+        console.log("\n-------------\n");
+	return false;
+    }
+}
