@@ -18,3 +18,11 @@ console.log(rogue);
 // Test case 3:
 const mage = new Character("Enigma", "Mage",31, 30, 25);
 console.log(mage);
+
+// Prototype method: printStats.
+Character.prototype.printStats = function() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Profession: ${this.profession}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`HitPoints: ${this.hitpoints}`);
+}
