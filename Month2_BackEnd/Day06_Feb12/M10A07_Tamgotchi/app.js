@@ -19,3 +19,16 @@ const DigitalPal = function() {
     }
   };
   
+  // Prototype method: sleep.
+  DigitalPal.prototype.sleep = function() {
+    if (this.sleepy) {
+      console.log("ZZzzZZZzzZZz~~");
+      this.sleepy = false;
+      this.bored = true;
+      this.increaseAge();
+    }
+    else {
+      console.log("No way! I'm not tired!");
+    }
+  };
+  
