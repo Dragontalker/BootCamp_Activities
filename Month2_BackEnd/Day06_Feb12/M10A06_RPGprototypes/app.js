@@ -1,8 +1,8 @@
 // Constructor function:
-function Character(name, profession, age, strength, hitpoints) {
+function Character(name, profession, level, strength, hitpoints) {
     this.name = name;
     this.profession = profession;
-    this.age = age;
+    this.level = level;
     this.strength = strength;
     this.hitpoints = hitpoints;
 }
@@ -19,12 +19,13 @@ console.log(rogue);
 const mage = new Character("Enigma", "Mage",31, 30, 25);
 console.log(mage);
 
+
 // Prototype method: printStats.
 Character.prototype.printStats = function() {
     console.log("-------------");
     console.log(`Name: ${this.name}`);
     console.log(`Profession: ${this.profession}`);
-    console.log(`Age: ${this.age}`);
+    console.log(`Age: ${this.level}`);
     console.log(`HitPoints: ${this.hitpoints}`);
     console.log("-------------");
 }
@@ -37,6 +38,7 @@ rogue.printStats();
 
 // Test case 3:
 mage.printStats();
+
 
 // Prototype method: isAlive.
 Character.prototype.isAlive = function() {
@@ -61,3 +63,6 @@ rogue.isAlive();
 
 // Test case 3:
 mage.isAlive();
+
+
+// Prototype method: levelUp.
