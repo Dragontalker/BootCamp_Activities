@@ -56,3 +56,10 @@ const DigitalPal = function() {
       console.log("I've already destroyed it all!");
     }
   };
+
+  // Prototype method: buyNewFurniture.
+  DigitalPal.prototype.buyNewFurniture = function() {
+    this.houseQuality += 50;
+    console.log("Are you sure that's a good idea?");
+  };
+  
