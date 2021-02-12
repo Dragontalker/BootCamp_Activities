@@ -32,3 +32,14 @@ const DigitalPal = function() {
     }
   };
   
+  // Prototype method: play.
+  DigitalPal.prototype.play = function() {
+    if (this.bored) {
+      console.log("Yay! Let's play!");
+      this.bored = false;
+      this.hungry = true;
+    }
+    else {
+      console.log("Not right now. Maybe later?");
+    }
+  };
