@@ -68,3 +68,16 @@ const DigitalPal = function() {
     this.age++;
     console.log("Happy Birthday to me! I am " + this.age + " old!");
   };
+
+  // Prototype method: letOutside.
+  DigitalPal.prototype.letOutside = function() {
+    if (!this.outside) {
+      console.log("Yay! I love the outdoors!");
+      this.outside = true;
+      this.bark();
+    }
+    else {
+      console.log("We're already outside though...");
+    }
+  };
+  
