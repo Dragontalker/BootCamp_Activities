@@ -1,4 +1,5 @@
-const apiCallDurations = [3000, 4000, 5000, 6000];
+const apiCallDurations1 = [3000, 4000, 5000, 6000];
+const apiCallDurations2 = [3000, 4000, 5000, 10000];
 const maxDuration = 9999;
 
 const callAPI = (duration) =>
@@ -14,10 +15,15 @@ const callAPI = (duration) =>
     }, duration);
   });
 
-const promises = [];
+const promisesPass = [];
+const promisesFail = [];
 
-apiCallDurations.map((duration) => promises.push(callAPI(duration)));
+apiCallDurations1.map((duration) => promisesPass.push(callAPI(duration)));
+apiCallDurations2.map((duration) => promisesFail.push(callAPI(duration)));
 
-console.log('Promises array before the timeouts have finished: ', promises);
+console.log('Promises array before the timeouts have finished: ', promisesPass);
 
 // TODO: Use Promise.all() to capture when the array of promises has been resolved or if any of them were rejected
+Promise.all(promisesPass)
+  .then((response) => console.log(`Reponse from Promise.all(): ${response}`))
+  .catch((err) => console.log(err));
