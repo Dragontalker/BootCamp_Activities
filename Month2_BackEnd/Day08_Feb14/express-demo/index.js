@@ -80,11 +80,12 @@ app.put('api/courses/:id', (req, res) => {
 
     // Validate
     // If validate, return 400 - Bad request
-    
-    const result = Joi.validate(req.body, schema);
-    if (result.error) {
+    // Use object destrucuring
+    const {error} = validateCourse(req.body);
+
+    if (error) {
         // 400 Bad Request
-        res.status(400).send(result.error.details[0].message);
+        res.status(400).send(error.details[0].message);
         return;
     };
 
