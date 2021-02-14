@@ -54,12 +54,7 @@ app.get('/api/courses/:id', (req, res) => {
 
 // Creating a post method
 app.post('/api/courses', (req, res) => {
-    // Define a schema
-    const schema = {
-        name: Joi.string().min(3).required()
-    };
-    const result = Joi.validate(req.body, schema);
-    console.log(result);
+    const result = validateCourse(req.body);
 
     // Adding validation logic
     if (result.error) {
@@ -85,9 +80,7 @@ app.put('api/courses/:id', (req, res) => {
 
     // Validate
     // If validate, return 400 - Bad request
-    const schema = {
-        name: Joi.string().min(3).required()
-    };
+    
     const result = Joi.validate(req.body, schema);
     if (result.error) {
         // 400 Bad Request
@@ -101,6 +94,15 @@ app.put('api/courses/:id', (req, res) => {
     // Return the updated course
     res.send(course);
 })
+
+// Creating a new validation function
+const validateCourse = (course) => {
+    const schema = {
+        name: Joi.string().min(3).required()
+    };
+
+    return Joi.validate(req.body, schema);
+};
 
 // Add an environment variable
 const port = process.env.PORT || 3000;
