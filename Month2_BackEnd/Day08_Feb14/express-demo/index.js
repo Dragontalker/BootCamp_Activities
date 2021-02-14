@@ -9,5 +9,10 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
+// Define the second route
+app.get('/api/courses', (req, res) => {
+    res.send([1, 2, 3]);
+});
+
 // Add a port listenr
 app.listen(3000, () => console.log('Listening on PORT 3000....'));
