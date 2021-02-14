@@ -96,7 +96,10 @@ app.put('api/courses/:id', (req, res) => {
     };
 
     // Update course 
+    course.name = req.body.name;
+
     // Return the updated course
+    res.send(course);
 })
 
 // Add an environment variable
