@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 
 // To be able to use body method in post route, we need this line
+// Basically, we are adding a piece of middleware.
 app.use(express.json());
 
 const courses = [
@@ -54,6 +55,8 @@ app.post('/api/courses', (req, res) => {
         id: courses.length + 1,
         name: req.body.name
     };
+    courses.push(course);
+    res.send(courses);
 });
 
 // Add an environment variable
