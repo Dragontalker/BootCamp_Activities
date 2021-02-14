@@ -2,6 +2,9 @@ const express = require('express');
 
 const app = express();
 
+// To be able to use body method in post route, we need this line
+app.use(express.json());
+
 const courses = [
     {
         id: 1,
@@ -38,12 +41,20 @@ app.get('/api/courses/:id', (req, res) => {
 
     // Otherwise, send back course to user.
     res.send(course);
-})
+});
 
 // Definte another route to demonstarte the params object inside request.
 app.get('/api/courses/:id', (req, res) => {
     res.send(req.params);
-})
+});
+
+// Creating a post method
+app.post('/api/courses', (req, res) => {
+    const course = {
+        id: courses.length + 1,
+        name: req.body.name
+    };
+});
 
 // Add an environment variable
 const port = process.env.PORT || 3000;
