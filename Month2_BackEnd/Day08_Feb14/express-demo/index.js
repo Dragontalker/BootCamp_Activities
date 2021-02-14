@@ -19,6 +19,11 @@ app.get('/api/courses/:id', (req, res) => {
     res.send(req.params.id);
 })
 
+// Definte another route to demonstarte the params object inside request.
+app.get('/api/posts/:year/:month', (req, res) => {
+    res.send(req.params);
+})
+
 // Add an environment variable
 const port = process.env.PORT || 3000;
 
