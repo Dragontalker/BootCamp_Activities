@@ -85,6 +85,15 @@ app.put('api/courses/:id', (req, res) => {
 
     // Validate
     // If validate, return 400 - Bad request
+    const schema = {
+        name: Joi.string().min(3).required()
+    };
+    const result = Joi.validate(req.body, schema);
+    if (result.error) {
+        // 400 Bad Request
+        res.status(400).send(result.error.details[0].message);
+        return;
+    };
 
     // Update course 
     // Return the updated course
