@@ -32,6 +32,12 @@ app.get('/api/courses', (req, res) => {
 // Define another route to get individual course.
 app.get('/api/courses/:id', (req, res) => {
     const course = courses.find(c => c.id === parseInt(req.params.id));
+
+    // Return 404 when object is not fund
+    if (!course) res.status(404).send('The course with the given ID was not found.')
+
+    // Otherwise, send back course to user.
+    res.send(course);
 })
 
 // Definte another route to demonstarte the params object inside request.
