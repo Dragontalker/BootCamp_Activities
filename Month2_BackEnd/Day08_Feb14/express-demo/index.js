@@ -76,6 +76,20 @@ app.post('/api/courses', (req, res) => {
     res.send(courses);
 });
 
+// Creating a put handler
+app.put('api/courses/:id', (req, res) => {
+    // Look up the course
+    // If not existing, return 404
+    const course = courses.find(c => c.id === parseInt(req.params.id));
+    if (!course) res.status(404).send('The course with the given ID was not found.');
+
+    // Validate
+    // If validate, return 400 - Bad request
+
+    // Update course 
+    // Return the updated course
+})
+
 // Add an environment variable
 const port = process.env.PORT || 3000;
 
