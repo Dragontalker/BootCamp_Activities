@@ -55,16 +55,16 @@ app.get('/api/courses/:id', (req, res) => {
 // Creating a post method
 app.post('/api/courses', (req, res) => {
     // Define a schema
-    const scheme = {
+    const schema = {
         name: Joi.string().min(3).required()
     };
-    const result = Joi.validate(req.body, scheme);
+    const result = Joi.validate(req.body, schema);
     console.log(result);
-    
+
     // Adding validation logic
-    if (!req.body.name || req.body.name.length < 3) {
+    if (result.error) {
         // 400 Bad Request
-        res.status(400).send('Name is required and should be minimum 3 characters.');
+        res.status(400).send(result.error);
         return;
     }
 
