@@ -2,6 +2,21 @@ const express = require('express');
 
 const app = express();
 
+const courses = [
+    {
+        id: 1,
+        name: 'course1'
+    },
+    {
+        id: 2,
+        name: 'course2'
+    },
+    {
+        id: 3,
+        name: 'course3'
+    }
+];
+
 // First arguement: url, where '/' represents roots of the folder
 // Second argument : a callback function with (request, response)
 app.get('/', (req, res) => {
@@ -11,16 +26,16 @@ app.get('/', (req, res) => {
 
 // Define the second route
 app.get('/api/courses', (req, res) => {
-    res.send([1, 2, 3]); 
+    res.send(courses); 
 });
 
 // Define another route to get individual course.
 app.get('/api/courses/:id', (req, res) => {
-    res.send(req.params.id);
+    const course = courses.find(c => c.id === parseInt(req.params.id));
 })
 
 // Definte another route to demonstarte the params object inside request.
-app.get('/api/posts/:year/:month', (req, res) => {
+app.get('/api/courses/:id', (req, res) => {
     res.send(req.params);
 })
 
