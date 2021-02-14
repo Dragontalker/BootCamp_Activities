@@ -54,6 +54,13 @@ app.get('/api/courses/:id', (req, res) => {
 
 // Creating a post method
 app.post('/api/courses', (req, res) => {
+    // Define a schema
+    const scheme = {
+        name: Joi.string().min(3).required()
+    };
+    const result = Joi.validate(req.body, scheme);
+    console.log(result);
+    
     // Adding validation logic
     if (!req.body.name || req.body.name.length < 3) {
         // 400 Bad Request
