@@ -14,6 +14,11 @@ app.get('/api/courses', (req, res) => {
     res.send([1, 2, 3]); 
 });
 
+// Define another route to get individual course.
+app.get('/api/courses/:id', (req, res) => {
+    res.send(req.params.id);
+})
+
 // Add an environment variable
 const port = process.env.PORT || 3000;
 
