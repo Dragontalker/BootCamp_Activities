@@ -3,4 +3,5 @@ const express = require('express');
 const app = express();
 
 // First arguement: url, where '/' represents roots of the folder
-app.get('/', );
+// Second argument : a callback function with (request, response)
+app.get('/', (req, res));
