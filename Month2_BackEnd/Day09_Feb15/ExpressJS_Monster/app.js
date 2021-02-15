@@ -10,8 +10,13 @@ app.get('/monsters', (req, res, next) => {
 });
 
 app.get('/monsters/:name', (req, res, next) => {
-    console.log(req.params)
-    res.send(monsters[req.params.name]);
+    const monsterObject = monsters[req.params.name];
+
+    if (monsterObject) {
+        res.send(monsterObject);
+    } else {
+        res.status(404).send('Monster not found.');
+    };
 });
 
 
