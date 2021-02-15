@@ -10,5 +10,18 @@ const callbackFunction1 = (request, response) => {
 const serverOne = http.createServer(callbackFunction1);
 
 serverOne.listen(PORT1, () => {
-    console.log(`Server litstening on : http://localhost:${PORT1}...`);
+    console.log(`Server listening on http://localhost:${PORT1}...`);
+});
+
+// Creating the second server.
+const PORT2 = 7500;
+
+const callbackFunction2 = (request, response) => {
+    response.end("Never trust a computer you can't throw out a window.");
+};
+
+const serverTwo = http.createServer(callbackFunction2);
+
+serverTwo.listen(PORT2, () => {
+    console.log(`Server listening on http://localhost:${PORT2}...`)
 });
