@@ -34,3 +34,8 @@ test('Should be under 1600', () => {
     expect(load1 + load2).toBeLessThan(1600);
     expect(load1 + load3).toBeLessThanOrEqual(1600);
 })
+
+// Testing reguar expression
+test('There is no I in team', () => {
+    expect('team').not.toMatch(/I/);
+});
