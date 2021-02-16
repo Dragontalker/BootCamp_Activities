@@ -22,14 +22,13 @@ const darthmaul = {
 // Create one more data entry for the character Obi Wan Kenobi.
 // Enter any values you like for the parameters following the same format as the Yoda and Darth Maul character
 //
+// YOUR CODE GOES HERE
 const obiwankenobi = {
   name: 'Obi Wan Kenobi',
   role: 'Jedi Knight',
   age: 60,
   forcePoints: 1350
-}
-
-// YOUR CODE GOES HERE
+};
 
 //
 
@@ -53,6 +52,9 @@ app.get('/darthmaul', (req, res) => {
 // YOUR CODE GOES HERE
 //
 //
+app.get('/obiwankenobi', (req, res) => {
+  res.json(obiwankenobi);
+});
 
 // Listener
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
