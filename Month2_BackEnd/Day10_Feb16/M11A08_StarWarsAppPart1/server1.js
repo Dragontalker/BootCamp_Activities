@@ -22,6 +22,12 @@ const darthmaul = {
 // Create one more data entry for the character Obi Wan Kenobi.
 // Enter any values you like for the parameters following the same format as the Yoda and Darth Maul character
 //
+const obiwankenobi = {
+  name: 'Obi Wan Kenobi',
+  role: 'Jedi Knight',
+  age: 60,
+  forcePoints: 1350
+}
 
 // YOUR CODE GOES HERE
 
