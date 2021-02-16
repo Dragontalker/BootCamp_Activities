@@ -14,3 +14,9 @@ const handleRequestHome = (req, res) => {
         });
     };
 };
+
+const server = http.createServer(handleRequestHome);
+
+server.listen(PORT, ()=> {
+    console.log(`Server is listening on PORT: ${PORT}...`);
+});
