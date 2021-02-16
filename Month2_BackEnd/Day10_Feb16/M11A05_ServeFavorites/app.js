@@ -3,19 +3,44 @@ const fs = require('fs');
 
 const PORT = process.env.PORT || 8080;
 
-const handleRequestHome = (req, res) => {
+const handleRequest = (req, res) => {
+    // Capture the url the request is made to
     const path = req.url;
-    
-    if (path === "/index") {
-        return fs.readFile(`${__dirname}/${path}.html`, (err, data) => {
-            if (err) throw err;
-            res.writeHead(200, {'Content-Type': 'text/html'});
-            res.send(data);
+  
+    // When we visit different urls, read and respond with different files
+    switch (path) {
+      case '/food':
+        return fs.readFile(`${__dirname}/food.html`, (err, data) => {
+          if (err) throw err;
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(data);
         });
-    };
-};
+  
+      case '/movies':
+        return fs.readFile(`${__dirname}/movies.html`, (err, data) => {
+          if (err) throw err;
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(data);
+        });
+  
+      case '/frameworks':
+        return fs.readFile(`${__dirname}/frameworks.html`, (err, data) => {
+          if (err) throw err;
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(data);
+        });
+  
+      // default to rendering index.html, if none of above cases are hit
+      default:
+        return fs.readFile(`${__dirname}/index.html`, (err, data) => {
+          if (err) throw err;
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(data);
+        });
+    }
+  };
 
-const server = http.createServer(handleRequestHome);
+const server = http.createServer(handleRequest);
 
 server.listen(PORT, ()=> {
     console.log(`Server is listening on PORT: ${PORT}...`);
