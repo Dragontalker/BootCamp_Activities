@@ -1,5 +1,6 @@
 const { TestScheduler } = require('jest');
 const functions = require('./functions');
+const axios = require('axios');
 
 test('Adds 2 + 2 equal 4', () => {
     // Using the basic Jest Matcher, toBe()
@@ -44,4 +45,13 @@ test('There is no I in team', () => {
 test('Admin should be in usernames', () => {
     usernames = ['john', 'karen', 'admin'];
     expect(usernames).toContain('admin');
-})
+});
+
+// Testing async data
+test('User fetched name should be Leanne Graham', () => {
+    expect.assertions(1);
+    return functions.fetchUser()
+        .then(data => {
+            expect(data.name).toEqual('Leanne Graham');
+        });
+});
