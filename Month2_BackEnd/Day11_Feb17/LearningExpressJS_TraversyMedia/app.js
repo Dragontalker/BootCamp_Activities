@@ -6,9 +6,6 @@ const app = express();
 
 const logger = require('./middleware/logger')
 
-// setting public the directory for our static files.
-// which means, you no longer need handlers such as res.sendFile(path.join(__dirname, 'public', 'index.html'));
-app.use(express.static(path.join(__dirname, 'public')));
 
 // creating a logger
 // app.use(logger);
@@ -20,6 +17,16 @@ app.set('view engine', 'handlebars');
 // Body Parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({extend: false}));
+
+// Homepage Route
+app.get('/', (req, res) => res.render('index', {
+    title: 'Member App'
+}));
+
+// setting public the directory for our static files.
+// which means, you no longer need handlers such as res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/api/members', require('./routes/api/members'));
 
