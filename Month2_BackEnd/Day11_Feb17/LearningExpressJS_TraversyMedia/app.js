@@ -18,6 +18,14 @@ const app = express();
 // setting public the directory for our static files.
 // which means, you no longer need handlers such as res.sendFile(path.join(__dirname, 'public', 'index.html'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// creating a logger
+const logger = (req, res, next) => {
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
+    next();
+};
+
+app.use(logger);
 // =====================================================================================
 
 
