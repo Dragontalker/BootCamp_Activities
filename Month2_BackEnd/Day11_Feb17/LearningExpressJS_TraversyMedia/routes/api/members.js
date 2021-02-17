@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const members = require('../../public/Members')
+
 // creating an json api for /api/members
 router.get('/api/members', (req, res) => res.json(members));
 
