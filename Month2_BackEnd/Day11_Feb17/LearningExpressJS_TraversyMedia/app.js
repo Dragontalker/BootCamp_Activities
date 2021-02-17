@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // handlers
 // =====================================================================================
 
-// creating an api
+// creating an json api for /api/members
 app.get('/api/members', (req, res) => {
     res.json(members);
 });
