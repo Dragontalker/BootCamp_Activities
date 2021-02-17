@@ -11,11 +11,18 @@ const app = express();
 // =====================================================================================
 
 
+// middleware
+// =====================================================================================
+
+// setting public the directory for our static files.
+// which means, you no longer need handlers such as res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.use(express.static(path.join(__dirname, 'public')));
+// =====================================================================================
+
+
 // handlers
 // =====================================================================================
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-})
+
 // =====================================================================================
 
 
