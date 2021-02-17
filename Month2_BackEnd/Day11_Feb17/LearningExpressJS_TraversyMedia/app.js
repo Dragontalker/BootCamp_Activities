@@ -2,35 +2,13 @@
 // =====================================================================================
 const express = require('express');
 const path = require('path');
-const { getMaxListeners } = require('process');
+const members = require('./public/Members')
 // =====================================================================================
 
 
 // initializing 
 // =====================================================================================
 const app = express();
-
-// json array
-const members = [
-    {
-        id: 1,
-        name: 'John Doe',
-        email: 'john@gmail.com',
-        status: 'active'
-    },
-    {
-        id: 2,
-        name: 'Bob Williams',
-        email: 'bob@gmail.com',
-        status: 'inactive'
-    },
-    {
-        id: 3,
-        name: 'Shannon Jackson',
-        email: 'shannon@gmail.com',
-        status: 'active'
-    }
-];
 // =====================================================================================
 
 
