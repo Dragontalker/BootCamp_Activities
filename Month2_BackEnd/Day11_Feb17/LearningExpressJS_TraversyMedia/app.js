@@ -1,10 +1,12 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const logger = require('./middleware/logger')
+const members = require('./public/Members')
 
 const app = express();
 
-const logger = require('./middleware/logger')
+
 
 
 // creating a logger
@@ -20,7 +22,8 @@ app.use(express.urlencoded({extend: false}));
 
 // Homepage Route
 app.get('/', (req, res) => res.render('index', {
-    title: 'Member App'
+    title: 'Member App',
+    members
 }));
 
 // setting public the directory for our static files.
