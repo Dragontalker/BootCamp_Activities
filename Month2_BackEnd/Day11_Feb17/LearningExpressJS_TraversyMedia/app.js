@@ -22,7 +22,7 @@ const logger = require('./middleware/logger')
 app.use(express.static(path.join(__dirname, 'public')));
 
 // creating a logger
-app.use(logger);
+// app.use(logger);
 // =====================================================================================
 
 
@@ -34,6 +34,10 @@ app.get('/api/members', (req, res) => {
     res.json(members);
 });
 
+// getting a single member
+app.get('/api/members/:id', (req, res) => {
+    res.send(req.params.id);
+});
 // =====================================================================================
 
 
