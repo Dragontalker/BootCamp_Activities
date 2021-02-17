@@ -4,10 +4,10 @@ const router = express.Router();
 const members = require('../../public/Members')
 
 // creating an json api for /api/members
-router.get('/api/members', (req, res) => res.json(members));
+router.get('/', (req, res) => res.json(members));
 
 // getting a single member
-router.get('/api/members/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     const found = members.some(member => member.id === parseInt(req.params.id));
 
     if (found) {
