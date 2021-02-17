@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // handlers
 // =====================================================================================
-app.use('/api/members', require());
+app.use('/api/members', require('./routes/api/members'));
 // =====================================================================================
 
 
