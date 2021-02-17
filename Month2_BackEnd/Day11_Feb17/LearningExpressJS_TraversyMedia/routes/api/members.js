@@ -16,3 +16,5 @@ router.get('/:id', (req, res) => {
         res.status(404).json({msg: `No member with the id of ${req.params.id}.`});
     };
 });
+
+module.exports = router;
