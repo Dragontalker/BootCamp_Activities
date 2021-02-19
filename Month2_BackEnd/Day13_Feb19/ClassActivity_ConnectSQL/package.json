@@ -10,5 +10,11 @@
   },
   "keywords": [],
   "author": "Tong (Richard) Yang",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
