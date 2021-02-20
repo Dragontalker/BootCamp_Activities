@@ -12,3 +12,30 @@ CREATE TABLE favourite_songs (
 );
 ==================
 */
+
+// module to connect to database (db-name, db-password)
+const db = require( './src/connection' )('favourites_db','sql23248265YT')
+
+async function main(){
+    let result
+    // create an entry
+    result = await db.query( "INSERT INTO favourite_songs VALUES('99 Luftballoon','Nena','Pop',10)" )
+    console.log( `-- INSERT Nena result: --\n`, result.affectedRows, "\n\n" )
+
+    // // create an entry with parameters
+    // const data = [ 'Santeria','Sublime','Reggae',10 ]
+    // result = await db.query( "INSERT INTO favourite_songs VALUES(?,?,?,?)", data )
+    // console.log( `-- INSERT Santeria result: --\n`, result.affectedRows, "\n\n" )
+
+    // show data
+    result = await db.query( 'SELECT * FROM favourite_songs' )
+    console.log( `-- SELECT * result: --\n`, result, "\n\n" )
+
+    // delete data
+    // result = await db.query( "DELETE FROM favourite_songs WHERE title='Santeria'" )
+    // console.log( `-- DELETE result: --\n`, result.affectedRows, "\n\n" )
+
+    // quite database connection
+    await db.close()
+}
+main()
