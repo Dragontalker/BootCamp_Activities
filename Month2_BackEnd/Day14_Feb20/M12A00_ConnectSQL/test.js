@@ -20,6 +20,17 @@ connectDb.connect((error) => {
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    connectDb.query("SELECT * FROM favorite_songs WHERE artist = 'Ariana Grande'", (error, rows, fix) => {
+        if (error) {
+            console.log('Error in the query');
+        } else {
+            console.log('Successfull query');
+            console.log(rows);
+        }
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server started at port ${PORT}...`);
 });
